@@ -4,7 +4,12 @@ import styled from "styled-components";
 
 class ProjectCard extends Component {
   render() {
-    return <CardWrapper />;
+    return (
+      <CardWrapper>
+        <h3>Hi</h3>
+        <p>Content Test</p>
+      </CardWrapper>
+    );
   }
 }
 

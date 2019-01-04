@@ -18,7 +18,7 @@ const ContentWrapper = styled.div`
 
 const MainGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 2vw;
   grid-row-gap: 2vh;
   margin-top: 5rem;
