@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import testerImg from "../tester-card.jpg";
 
 class ProjectCard extends Component {
   render() {
     return (
       <CardWrapper>
+        <ProjectImageContainer>
+          <ProjectImage src={testerImg} alt={testerImg} />
+        </ProjectImageContainer>
         <YouthName>Jonathan</YouthName>
         <ProjectSemester>Fall 2018</ProjectSemester>
       </CardWrapper>
@@ -29,7 +33,9 @@ const CardWrapper = styled.div`
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 `;
 
-const ProjectImageContainer = styled.div``;
+const ProjectImageContainer = styled.div`
+  margin-bottom: 4rem;
+`;
 
 const ProjectImage = styled.img``;
 
