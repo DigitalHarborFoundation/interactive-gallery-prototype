@@ -24,7 +24,7 @@ const HeaderWrapper = styled.div`
   align-items: center;
   min-height: 80vh;
   min-width: 100vw;
-  width: 100%1;
+  width: 100%;
   height: 100%;
   background: linear-gradient(rgba(0, 145, 201, 0.3), rgba(0, 145, 201, 0.3)),
     url(${heroImg});
@@ -52,13 +52,14 @@ const CTAContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
+  margin-top: 20vh;
 `;
 
 const ProjectTitle = styled.h2`
   font-size: 3.2rem;
   font-weight: normal;
   color: #fafafa;
+  margin-bottom: 10vh;
 `;
 
 const ButtonContainer = styled.div`
