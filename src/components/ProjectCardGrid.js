@@ -2,15 +2,26 @@ import React from "react";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 
-const ProjectCardGrid = props => <MainGrid />;
+const ProjectCardGrid = props => (
+  <ContentWrapper>
+    <MainGrid>
+      <ProjectCard />
+    </MainGrid>
+  </ContentWrapper>
+);
+export default ProjectCardGrid;
 
-export default GlossaryCardGrid;
+const ContentWrapper = styled.div`
+  width: 80%;
+  margin: 0 auto;
+`;
 
 const MainGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 2vw;
   grid-row-gap: 2vh;
+  margin-top: 5rem;
   @media only screen and (max-width: 1000px) {
     grid-template-columns: 1fr;
   }
