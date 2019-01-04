@@ -6,8 +6,8 @@ class ProjectCard extends Component {
   render() {
     return (
       <CardWrapper>
-        <h3>Hi</h3>
-        <p>Content Test</p>
+        <YouthName>Jonathan</YouthName>
+        <ProjectSemester>Fall 2018</ProjectSemester>
       </CardWrapper>
     );
   }
@@ -16,6 +16,8 @@ class ProjectCard extends Component {
 ProjectCard.propTypes = {};
 
 ProjectCard.defaultProps = {};
+
+export default ProjectCard;
 
 const CardWrapper = styled.div`
   display: flex;
@@ -27,4 +29,20 @@ const CardWrapper = styled.div`
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 `;
 
-export default ProjectCard;
+const ProjectImageContainer = styled.div``;
+
+const ProjectImage = styled.img``;
+
+const YouthName = styled.p`
+  color: #000;
+  font-size: 3.2rem;
+  margin: 0;
+  padding: 0;
+`;
+
+const ProjectSemester = styled.p`
+  color: #5c5f5f;
+  font-size: 2.4rem;
+  margin: 0;
+  padding: 0;
+`;
