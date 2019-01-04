@@ -6,9 +6,13 @@ const Header = () => (
     <LogoWrapper>
       <DHFTitle>Digital Harbor Foundation</DHFTitle>
     </LogoWrapper>
-    <ProjectTitle>Interactive Project Gallery</ProjectTitle>
-    <GhostButton>VectorFab</GhostButton>
-    <GhostButton>Game Workshop</GhostButton>
+    <CTAContainer>
+      <ProjectTitle>Interactive Project Gallery</ProjectTitle>
+      <ButtonContainer>
+        <GhostButton>VectorFab</GhostButton>
+        <GhostButton>Game Workshop</GhostButton>
+      </ButtonContainer>
+    </CTAContainer>
   </HeaderWrapper>
 );
 export default Header;
@@ -36,14 +40,30 @@ const DHFTitle = styled.h1`
   color: #fafafa;
 `;
 
+const CTAContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+`;
+
 const ProjectTitle = styled.h2`
   font-size: 3.2rem;
   font-weight: normal;
   color: #fafafa;
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+`;
+
 const GhostButton = styled.button`
-  border: 3px solid #fafafa;
+  width: 24rem;
+  border: 1px solid #fafafa;
   border-radius: 15px;
   background-color: rgba(196, 196, 196, 0);
   color: #fafafa;
@@ -51,4 +71,13 @@ const GhostButton = styled.button`
   font-size: 1.6rem;
   font-weight: 300;
   padding: 1.6rem 2.4rem;
+  text-align: center;
+
+  &:first-child {
+    margin-right: 2.4rem;
+  }
+
+  &:last-child {
+    margin-left: 2.4rem;
+  }
 `;
