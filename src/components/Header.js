@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import heroImg from "../hero-img.jpg";
 
 const Header = () => (
   <HeaderWrapper>
@@ -21,8 +22,14 @@ const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 60vh;
-  background: #0091c9;
+  min-height: 80vh;
+  min-width: 100vw;
+  width: 100%1;
+  height: 100%;
+  background: linear-gradient(rgba(0, 145, 201, 0.3), rgba(0, 145, 201, 0.3)),
+    url(${heroImg});
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 const LogoWrapper = styled.div`
