@@ -34,6 +34,13 @@ const CardWrapper = styled.div`
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border-radius: 10px;
   /* transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); */
+  transition: all 0.5s ease-in-out;
+
+  :hover {
+    box-shadow: rgba(39, 44, 49, 0.07) 8px 28px 50px, rgba(39, 44, 49, 0.04) 1px 6px 12px;
+    transform: translate3D(0, -1px, 0) scale(1.02);
+    cursor: pointer;
+
 `;
 
 const ProjectImageContainer = styled.div`
