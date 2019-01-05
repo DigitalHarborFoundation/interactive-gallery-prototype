@@ -70,6 +70,7 @@ const YouthName = styled.p`
 const ProjectSemester = styled.p`
   color: #5c5f5f;
   font-size: 2.4rem;
+  font-weight: 300;
   margin: 0;
   padding: 0;
 `;
