@@ -6,6 +6,11 @@ const ProjectCardGrid = props => (
   <ContentWrapper>
     <MainGrid>
       <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
     </MainGrid>
   </ContentWrapper>
 );
@@ -20,7 +25,7 @@ const MainGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 2vw;
-  grid-row-gap: 2vh;
+  grid-row-gap: 10vh;
   margin-top: 5rem;
   @media only screen and (max-width: 1000px) {
     grid-template-columns: 1fr;
