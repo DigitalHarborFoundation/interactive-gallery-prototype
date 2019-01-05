@@ -10,8 +10,10 @@ class ProjectCard extends Component {
         <ProjectImageContainer>
           <ProjectImage src={testerImg} alt={testerImg} />
         </ProjectImageContainer>
-        <YouthName>Jonathan</YouthName>
-        <ProjectSemester>Fall 2018</ProjectSemester>
+        <ProjectInfoContainer>
+          <YouthName>Jonathan</YouthName>
+          <ProjectSemester>Fall 2018</ProjectSemester>
+        </ProjectInfoContainer>
       </CardWrapper>
     );
   }
@@ -28,16 +30,30 @@ const CardWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #fff;
-  padding: 2vh 2vw;
+  /* padding: 2vh 2vw; */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 10px;
+  /* transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); */
 `;
 
 const ProjectImageContainer = styled.div`
-  margin-bottom: 4rem;
+  width: 100%;
+  height: 100%;
 `;
 
-const ProjectImage = styled.img``;
+const ProjectImage = styled.img`
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+`;
+
+const ProjectInfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+`;
 
 const YouthName = styled.p`
   color: #000;

@@ -13,7 +13,7 @@ export default ProjectCardGrid;
 
 const ContentWrapper = styled.div`
   width: 80%;
-  margin: 0 auto;
+  margin: 10vh auto;
 `;
 
 const MainGrid = styled.div`
