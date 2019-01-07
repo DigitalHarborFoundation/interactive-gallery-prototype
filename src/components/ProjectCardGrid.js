@@ -6,7 +6,9 @@ const ProjectCardGrid = props => (
   <ContentWrapper>
     <h2>
       Current course is{" "}
-      {props.selectedCourse === "VectorFab" ? "VectorFab" : "Game Workshop"}{" "}
+      {props.selectedCourse.toLowerCase() === "vectorfab"
+        ? "VectorFab"
+        : "Game Workshop"}{" "}
     </h2>
     <MainGrid>
       <ProjectCard youthName="Jonathan" projectSemester="Fall 2018" />
