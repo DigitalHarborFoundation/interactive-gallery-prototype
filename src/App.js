@@ -10,14 +10,9 @@ class App extends Component {
   };
 
   toggleCourse = courseName => {
-    console.log(`Course toggled to: ${courseName}`);
+    console.log(`Course toggled to: ${courseName.toLowerCase()}`);
+    console.log("event registered!");
   };
-
-  componentDidMount() {
-    this.state.selectedCourse === ""
-      ? console.log("No course loaded yet")
-      : console.log(`Current course: ${this.state.selectedCourse}`);
-  }
 
   render() {
     return (
