@@ -25,7 +25,10 @@ ProjectCard.propTypes = {
   projectSemester: PropTypes.string.isRequired
 };
 
-ProjectCard.defaultProps = {};
+ProjectCard.defaultProps = {
+  youthName: "DHF Youth",
+  projectSemester: "Fall 2018"
+};
 
 export default ProjectCard;
 
