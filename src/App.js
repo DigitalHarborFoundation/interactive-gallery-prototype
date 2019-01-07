@@ -6,7 +6,7 @@ import ProjectCardGrid from "./components/ProjectCardGrid";
 
 class App extends Component {
   state = {
-    selectedCourse: "TEST"
+    selectedCourse: "VectorFab"
   };
 
   toggleCourse = courseName => {

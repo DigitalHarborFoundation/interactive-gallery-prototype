@@ -4,7 +4,10 @@ import ProjectCard from "./ProjectCard";
 
 const ProjectCardGrid = props => (
   <ContentWrapper>
-    <h2>{props.selectedCourse}</h2>
+    <h2>
+      Current course is{" "}
+      {props.selectedCourse === "VectorFab" ? "VectorFab" : "Game Workshop"}{" "}
+    </h2>
     <MainGrid>
       <ProjectCard youthName="Jonathan" projectSemester="Fall 2018" />
       <ProjectCard youthName="Shawn" projectSemester="Fall 2018" />
