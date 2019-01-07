@@ -5,11 +5,28 @@ import Footer from "./components/Footer";
 import ProjectCardGrid from "./components/ProjectCardGrid";
 
 class App extends Component {
+  state = {
+    course: ""
+  };
+
+  toggleCourse = (e, courseName) => {
+    e.preventDefault();
+    this.setState({
+      course: courseName
+    });
+  };
+
+  componentDidMount() {
+    this.state.course === ""
+      ? console.log("No course loaded yet")
+      : console.log(`Current course: ${this.state.course}`);
+  }
+
   render() {
     return (
       <AppWrapper>
         <Header />
-        <ProjectCardGrid />
+        <ProjectCardGrid courseToggle={this.toggleCourse} />
         <Footer />
       </AppWrapper>
     );

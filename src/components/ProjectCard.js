@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import testerImg from "../tester-card.jpg";
+import testerCardOne from "../tester-card.jpg";
+import testerCardTwo from "../tester-typewriter-card.jpg";
 
 class ProjectCard extends Component {
   render() {
     return (
       <CardWrapper>
         <ProjectImageContainer>
-          <ProjectImage src={testerImg} alt={testerImg} />
+          <ProjectImage src={testerCardOne} alt={testerCardOne} />
         </ProjectImageContainer>
         <ProjectInfoContainer>
           <YouthName>Jonathan</YouthName>
