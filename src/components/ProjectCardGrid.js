@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import ProjectCard from "./ProjectCard";
 
 const ProjectCardGrid = props => (
@@ -13,7 +14,7 @@ const ProjectCardGrid = props => (
     {props.selectedCourse.toLowerCase() === "vectorfab" ? (
       <p>Stuff about vectorfab</p>
     ) : (
-      <p>Stuff not about vectorfab</p>
+      <p>Stuff about game workshop</p>
     )}
     <MainGrid>
       <ProjectCard youthName="Jonathan" projectSemester="Fall 2018" />
@@ -25,6 +26,15 @@ const ProjectCardGrid = props => (
     </MainGrid>
   </ContentWrapper>
 );
+
+ProjectCardGrid.propTypes = {
+  selectedCourse: PropTypes.string.isRequired
+};
+
+ProjectCardGrid.defaultProps = {
+  selectedCourse: "VectorFab"
+};
+
 export default ProjectCardGrid;
 
 const ContentWrapper = styled.div`
