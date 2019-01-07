@@ -20,7 +20,10 @@ class ProjectCard extends Component {
   }
 }
 
-ProjectCard.propTypes = {};
+ProjectCard.propTypes = {
+  youthName: PropTypes.string.isRequired,
+  projectSemester: PropTypes.string.isRequired
+};
 
 ProjectCard.defaultProps = {};
 
