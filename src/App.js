@@ -11,7 +11,9 @@ class App extends Component {
 
   toggleCourse = courseName => {
     console.log(`Course toggled to: ${courseName.toLowerCase()}`);
-    console.log("event registered!");
+    this.setState({
+      selectedCourse: `${courseName.toLowerCase()}`
+    });
   };
 
   render() {
