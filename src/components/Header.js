@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import heroImg from "../hero-img.jpg";
 
-const Header = () => (
+const Header = props => (
   <HeaderWrapper>
     <LogoWrapper>
       <DHFTitle>Digital Harbor Foundation</DHFTitle>
@@ -10,8 +10,8 @@ const Header = () => (
     <CTAContainer>
       <ProjectTitle>Interactive Project Gallery</ProjectTitle>
       <ButtonContainer>
-        <GhostButton>VectorFab</GhostButton>
-        <GhostButton>Game Workshop</GhostButton>
+        <GhostButton onClick={props.toggleCourse}>VectorFab</GhostButton>
+        <GhostButton onClick={props.toggleCourse}>Game Workshop</GhostButton>
       </ButtonContainer>
     </CTAContainer>
   </HeaderWrapper>

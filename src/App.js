@@ -9,11 +9,8 @@ class App extends Component {
     course: ""
   };
 
-  toggleCourse = (e, courseName) => {
-    e.preventDefault();
-    this.setState({
-      course: courseName
-    });
+  toggleCourse = courseName => {
+    console.log(`Course toggled to: ${courseName}`);
   };
 
   componentDidMount() {
@@ -25,8 +22,8 @@ class App extends Component {
   render() {
     return (
       <AppWrapper>
-        <Header />
-        <ProjectCardGrid courseToggle={this.toggleCourse} />
+        <Header toggleCourse={this.toggleCourse.bind(this)} />
+        <ProjectCardGrid />
         <Footer />
       </AppWrapper>
     );

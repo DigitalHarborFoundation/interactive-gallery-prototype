@@ -5,12 +5,12 @@ import ProjectCard from "./ProjectCard";
 const ProjectCardGrid = props => (
   <ContentWrapper>
     <MainGrid>
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
+      <ProjectCard youthName="Jonathan" projectSemester="Fall 2018" />
+      <ProjectCard youthName="Shawn" projectSemester="Fall 2018" />
+      <ProjectCard youthName="Steph" projectSemester="Fall 2018" />
+      <ProjectCard youthName="Andrew" projectSemester="Fall 2018" />
+      <ProjectCard youthName="Darius" projectSemester="Fall 2018" />
+      <ProjectCard youthName="Ruby" projectSemester="Fall 2018" />
     </MainGrid>
   </ContentWrapper>
 );

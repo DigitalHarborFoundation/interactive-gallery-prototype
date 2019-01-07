@@ -12,8 +12,8 @@ class ProjectCard extends Component {
           <ProjectImage src={testerCardOne} alt={testerCardOne} />
         </ProjectImageContainer>
         <ProjectInfoContainer>
-          <YouthName>Jonathan</YouthName>
-          <ProjectSemester>Fall 2018</ProjectSemester>
+          <YouthName>{this.props.youthName}</YouthName>
+          <ProjectSemester>{this.props.projectSemester}</ProjectSemester>
         </ProjectInfoContainer>
       </CardWrapper>
     );
