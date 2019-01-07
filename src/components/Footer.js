@@ -3,7 +3,13 @@ import styled from "styled-components";
 
 const Footer = () => (
   <FooterWrapper>
-    <FooterTagline>Digital Harbor Foundation 🦄 2019</FooterTagline>
+    <FooterTagline>
+      Digital Harbor Foundation{" "}
+      <span role="img" aria-label="Unicorn">
+        🦄
+      </span>{" "}
+      2019
+    </FooterTagline>
   </FooterWrapper>
 );
 
