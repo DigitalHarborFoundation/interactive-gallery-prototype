@@ -5,34 +5,65 @@ import ProjectCard from "./ProjectCard";
 
 const ProjectCardGrid = props => (
   <ContentWrapper>
-    <h2>
+    <h2>This is for testing purposes:</h2>
+    <h3>
       Current course is{" "}
       {props.selectedCourse.toLowerCase() === "vectorfab"
         ? "VectorFab"
         : "Game Workshop"}{" "}
-    </h2>
+    </h3>
     {props.selectedCourse.toLowerCase() === "vectorfab" ? (
       <p>Stuff about vectorfab</p>
     ) : (
       <p>Stuff about game workshop</p>
     )}
     <MainGrid>
-      <ProjectCard youthName="Jonathan" projectSemester="Fall 2018" />
-      <ProjectCard youthName="Shawn" projectSemester="Fall 2018" />
-      <ProjectCard youthName="Steph" projectSemester="Fall 2018" />
-      <ProjectCard youthName="Andrew" projectSemester="Fall 2018" />
-      <ProjectCard youthName="Darius" projectSemester="Fall 2018" />
-      <ProjectCard youthName="Ruby" projectSemester="Fall 2018" />
+      <ProjectCard
+        enrolledCourse="VectorFab"
+        youthName="Jonathan"
+        projectSemester="Fall 2018"
+      />
+      <ProjectCard
+        enrolledCourse="VectorFab"
+        youthName="Shawn"
+        projectSemester="Fall 2018"
+      />
+      <ProjectCard
+        enrolledCourse="VectorFab"
+        youthName="Steph"
+        projectSemester="Fall 2018"
+      />
+      <ProjectCard
+        enrolledCourse="VectorFab"
+        youthName="Andrew"
+        projectSemester="Fall 2018"
+      />
+      <ProjectCard
+        enrolledCourse="VectorFab"
+        youthName="Darius"
+        projectSemester="Fall 2018"
+      />
+      <ProjectCard
+        enrolledCourse="VectorFab"
+        youthName="Ruby"
+        projectSemester="Fall 2018"
+      />
     </MainGrid>
   </ContentWrapper>
 );
 
 ProjectCardGrid.propTypes = {
-  selectedCourse: PropTypes.string.isRequired
+  selectedCourse: PropTypes.string.isRequired,
+  enrolledCourse: PropTypes.string.isRequired,
+  youthName: PropTypes.string.isRequired,
+  projectSemester: PropTypes.string.isRequired
 };
 
 ProjectCardGrid.defaultProps = {
-  selectedCourse: "VectorFab"
+  selectedCourse: "VectorFab",
+  enrolledCourse: "VectorFab",
+  youthName: "DHF Youth",
+  projectSemester: "Fall 2018"
 };
 
 export default ProjectCardGrid;
