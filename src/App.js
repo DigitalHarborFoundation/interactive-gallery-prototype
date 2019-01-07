@@ -6,7 +6,7 @@ import ProjectCardGrid from "./components/ProjectCardGrid";
 
 class App extends Component {
   state = {
-    course: ""
+    selectedCourse: "TEST"
   };
 
   toggleCourse = courseName => {
@@ -14,16 +14,16 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.state.course === ""
+    this.state.selectedCourse === ""
       ? console.log("No course loaded yet")
-      : console.log(`Current course: ${this.state.course}`);
+      : console.log(`Current course: ${this.state.selectedCourse}`);
   }
 
   render() {
     return (
       <AppWrapper>
         <Header toggleCourse={this.toggleCourse.bind(this)} />
-        <ProjectCardGrid />
+        <ProjectCardGrid selectedCourse={this.state.selectedCourse} />
         <Footer />
       </AppWrapper>
     );
