@@ -10,6 +10,11 @@ const ProjectCardGrid = props => (
         ? "VectorFab"
         : "Game Workshop"}{" "}
     </h2>
+    {props.selectedCourse.toLowerCase() === "vectorfab" ? (
+      <p>Stuff about vectorfab</p>
+    ) : (
+      <p>Stuff not about vectorfab</p>
+    )}
     <MainGrid>
       <ProjectCard youthName="Jonathan" projectSemester="Fall 2018" />
       <ProjectCard youthName="Shawn" projectSemester="Fall 2018" />
