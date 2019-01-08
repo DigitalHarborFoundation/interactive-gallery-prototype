@@ -21,6 +21,7 @@ const ProjectCardGrid = props => (
     <MainGrid>
       {entries.map(entry => (
         <ProjectCard
+          key={entry.id}
           imgSource={entry.imgSource}
           youthName={entry.youthName}
           projectSemester={entry.projectSemester}
