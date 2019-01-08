@@ -7,7 +7,6 @@ import { entries } from "../data";
 const ProjectCardGrid = props => (
   <ContentWrapper>
     <h2>This is for testing purposes:</h2>
-    {entries[0].youthName}
     <h3>
       Current course is{" "}
       {props.selectedCourse.toLowerCase() === "vectorfab"
@@ -20,37 +19,13 @@ const ProjectCardGrid = props => (
       <p>Stuff about game workshop</p>
     )}
     <MainGrid>
-      <ProjectCard
-        enrolledCourse="VectorFab"
-        youthName="TEST"
-        projectSemester="Fall 2018"
-        imgSource="https://dczvtk204qxa5.cloudfront.net/wp-content/uploads/2016/03/dhf_youth.jpg"
-      />
-      <ProjectCard
-        enrolledCourse="VectorFab"
-        youthName="Shawn"
-        projectSemester="Fall 2018"
-      />
-      <ProjectCard
-        enrolledCourse="VectorFab"
-        youthName="Steph"
-        projectSemester="Fall 2018"
-      />
-      <ProjectCard
-        enrolledCourse="VectorFab"
-        youthName="Andrew"
-        projectSemester="Fall 2018"
-      />
-      <ProjectCard
-        enrolledCourse="VectorFab"
-        youthName="Darius"
-        projectSemester="Fall 2018"
-      />
-      <ProjectCard
-        enrolledCourse="VectorFab"
-        youthName="Ruby"
-        projectSemester="Fall 2018"
-      />
+      {entries.map(entry => (
+        <ProjectCard
+          imgSource={entry.imgSource}
+          youthName={entry.youthName}
+          projectSemester={entry.projectSemester}
+        />
+      ))}
     </MainGrid>
   </ContentWrapper>
 );
