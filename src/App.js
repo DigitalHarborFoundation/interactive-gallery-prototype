@@ -7,11 +7,11 @@ import { entries } from "./data";
 
 class App extends Component {
   state = {
-    entries: entries,
+    entries: [],
     selectedCourse: "VectorFab"
   };
 
-  toggleCourse = courseName => {
+  selectCourse = courseName => {
     console.log(`Course toggled to: ${courseName.toLowerCase()}`);
     this.setState({
       selectedCourse: `${courseName.toLowerCase()}`
@@ -21,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <AppWrapper>
-        <Header toggleCourse={this.toggleCourse.bind(this)} />
+        <Header selectCourse={this.selectCourse.bind(this)} />
         <ProjectCardGrid
           entries={this.state.entries}
           selectedCourse={this.state.selectedCourse}

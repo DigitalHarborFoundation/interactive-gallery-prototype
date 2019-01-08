@@ -10,10 +10,10 @@ const Header = props => (
     <CTAContainer>
       <ProjectTitle>Interactive Project Gallery</ProjectTitle>
       <ButtonContainer>
-        <GhostButton onClick={props.toggleCourse.bind(this, "VectorFab")}>
+        <GhostButton onClick={props.selectCourse.bind(this, "VectorFab")}>
           VectorFab
         </GhostButton>
-        <GhostButton onClick={props.toggleCourse.bind(this, "Game Workshop")}>
+        <GhostButton onClick={props.selectCourse.bind(this, "Game Workshop")}>
           Game Workshop
         </GhostButton>
       </ButtonContainer>
