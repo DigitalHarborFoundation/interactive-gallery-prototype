@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import ProjectCard from "./ProjectCard";
+import { entries } from "../data";
 
 const ProjectCardGrid = props => (
   <ContentWrapper>
     <h2>This is for testing purposes:</h2>
+    {entries[0].youthName}
     <h3>
       Current course is{" "}
       {props.selectedCourse.toLowerCase() === "vectorfab"
