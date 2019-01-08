@@ -9,7 +9,7 @@ class ProjectCard extends Component {
     return (
       <CardWrapper>
         <ProjectImageContainer>
-          <ProjectImage src={testerCardOne} alt={testerCardOne} />
+          <ProjectImage src={this.props.imgSource} alt={testerCardOne} />
         </ProjectImageContainer>
         <ProjectInfoContainer>
           <YouthName>{this.props.youthName}</YouthName>

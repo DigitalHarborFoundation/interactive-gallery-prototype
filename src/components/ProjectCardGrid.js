@@ -20,8 +20,9 @@ const ProjectCardGrid = props => (
     <MainGrid>
       <ProjectCard
         enrolledCourse="VectorFab"
-        youthName="Jonathan"
+        youthName="TEST"
         projectSemester="Fall 2018"
+        imgSource="https://dczvtk204qxa5.cloudfront.net/wp-content/uploads/2016/03/dhf_youth.jpg"
       />
       <ProjectCard
         enrolledCourse="VectorFab"

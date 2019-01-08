@@ -11,7 +11,7 @@ export const entries = [
   },
   {
     id: 2,
-    youthName: "Jonathan",
+    youthName: "Shawn",
     semester: "Fall 2018",
     course: "VectorFab",
     projectTitle: "My French Press",
@@ -21,7 +21,7 @@ export const entries = [
   },
   {
     id: 3,
-    youthName: "Jonathan",
+    youthName: "Steph",
     semester: "Fall 2018",
     course: "VectorFab",
     projectTitle: "My French Press",
@@ -31,7 +31,7 @@ export const entries = [
   },
   {
     id: 4,
-    youthName: "Jonathan",
+    youthName: "Andrew",
     semester: "Fall 2018",
     course: "VectorFab",
     projectTitle: "My French Press",
