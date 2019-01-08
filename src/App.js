@@ -33,9 +33,7 @@ class App extends Component {
           entries={this.state.entries}
           selectedCourse={this.state.selectedCourse}
         />
-        <Portal>
-          <h2>Testing Portal</h2>
-        </Portal>
+        <Portal />
         <Footer />
       </AppWrapper>
     );
