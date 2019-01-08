@@ -28,7 +28,10 @@ class App extends Component {
   render() {
     return (
       <AppWrapper>
-        <ProjectModal />
+        <ProjectModal
+          entries={this.state.entries}
+          selectedCourse={this.state.selectedCourse}
+        />
         <Header selectCourse={this.selectCourse.bind(this)} />
         <ProjectCardGrid
           entries={this.state.entries}
