@@ -7,7 +7,17 @@ class ProjectCard extends Component {
     return (
       <CardWrapper>
         <ProjectImageContainer>
-          <ProjectImage src={this.props.imgSource} alt={this.props.imgSource} />
+          {this.props.imgSource !== "" ? (
+            <ProjectImage
+              src={this.props.imgSource}
+              alt={this.props.imgSource}
+            />
+          ) : (
+            <ProjectImage
+              src="/images/tester-card.jpg"
+              alt="French Press Coffee Maker"
+            />
+          )}
         </ProjectImageContainer>
         <ProjectInfoContainer>
           <YouthName>{this.props.youthName}</YouthName>
