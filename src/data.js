@@ -26,8 +26,7 @@ export const entries = [
     course: "VectorFab",
     projectTitle: "My French Press",
     makerStatement:
-      "A Organic latte, sugar grounds, medium extra con panna as turkish. Coffee id flavour mazagran cortado foam, aroma caffeine brewed caramelization froth americano. Mocha, pumpkin spice, half and half, redeye coffee caffeine in caffeine froth.prototype is a first model or version of something",
-    img: ""
+      "A Organic latte, sugar grounds, medium extra con panna as turkish. Coffee id flavour mazagran cortado foam, aroma caffeine brewed caramelization froth americano. Mocha, pumpkin spice, half and half, redeye coffee caffeine in caffeine froth.prototype is a first model or version of something"
   },
   {
     id: 4,
@@ -36,7 +35,6 @@ export const entries = [
     course: "VectorFab",
     projectTitle: "My French Press",
     makerStatement:
-      "A Organic latte, sugar grounds, medium extra con panna as turkish. Coffee id flavour mazagran cortado foam, aroma caffeine brewed caramelization froth americano. Mocha, pumpkin spice, half and half, redeye coffee caffeine in caffeine froth.prototype is a first model or version of something",
-    img: ""
+      "A Organic latte, sugar grounds, medium extra con panna as turkish. Coffee id flavour mazagran cortado foam, aroma caffeine brewed caramelization froth americano. Mocha, pumpkin spice, half and half, redeye coffee caffeine in caffeine froth.prototype is a first model or version of something"
   }
 ];

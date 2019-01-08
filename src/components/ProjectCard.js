@@ -19,11 +19,13 @@ class ProjectCard extends Component {
 }
 
 ProjectCard.propTypes = {
+  imgSource: PropTypes.string.isRequired,
   youthName: PropTypes.string.isRequired,
   projectSemester: PropTypes.string.isRequired
 };
 
 ProjectCard.defaultProps = {
+  imgSource: "/images/tester-card.jpg",
   youthName: "DHF Youth",
   projectSemester: "Fall 2018"
 };
@@ -52,8 +54,6 @@ const ProjectImageContainer = styled.div`
 `;
 
 const ProjectImage = styled.img`
-  width: 100%;
-  height: 100%;
   border-radius: 10px;
 `;
 

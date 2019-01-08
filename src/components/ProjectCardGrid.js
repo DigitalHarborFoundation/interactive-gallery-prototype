@@ -32,6 +32,7 @@ const ProjectCardGrid = props => (
 );
 
 ProjectCardGrid.propTypes = {
+  imgSource: PropTypes.string.isRequired,
   selectedCourse: PropTypes.string.isRequired,
   enrolledCourse: PropTypes.string.isRequired,
   youthName: PropTypes.string.isRequired,
@@ -39,6 +40,7 @@ ProjectCardGrid.propTypes = {
 };
 
 ProjectCardGrid.defaultProps = {
+  imgSource: "/images/tester-card.jpg",
   selectedCourse: "VectorFab",
   enrolledCourse: "VectorFab",
   youthName: "DHF Youth",
