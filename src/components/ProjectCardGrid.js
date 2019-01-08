@@ -1,35 +1,39 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import ProjectCard from "./ProjectCard";
 import { entries } from "../data";
 
-const ProjectCardGrid = props => (
-  <ContentWrapper>
-    <h2>This is for testing purposes:</h2>
-    <h3>
-      Current course is{" "}
-      {props.selectedCourse.toLowerCase() === "vectorfab"
-        ? "VectorFab"
-        : "Game Workshop"}{" "}
-    </h3>
-    {props.selectedCourse.toLowerCase() === "vectorfab" ? (
-      <p>Stuff about vectorfab</p>
-    ) : (
-      <p>Stuff about game workshop</p>
-    )}
-    <MainGrid>
-      {entries.map(entry => (
-        <ProjectCard
-          key={entry.id}
-          imgSource={entry.imgSource}
-          youthName={entry.youthName}
-          projectSemester={entry.projectSemester}
-        />
-      ))}
-    </MainGrid>
-  </ContentWrapper>
-);
+class ProjectCardGrid extends Component {
+  render() {
+    return (
+      <ContentWrapper>
+        <h2>This is for testing purposes:</h2>
+        <h3>
+          Current course is{" "}
+          {this.props.selectedCourse.toLowerCase() === "vectorfab"
+            ? "VectorFab"
+            : "Game Workshop"}{" "}
+        </h3>
+        {this.props.selectedCourse.toLowerCase() === "vectorfab" ? (
+          <p>Stuff about vectorfab</p>
+        ) : (
+          <p>Stuff about game workshop</p>
+        )}
+        <MainGrid>
+          {entries.map(entry => (
+            <ProjectCard
+              key={entry.id}
+              imgSource={entry.imgSource}
+              youthName={entry.youthName}
+              projectSemester={entry.projectSemester}
+            />
+          ))}
+        </MainGrid>
+      </ContentWrapper>
+    );
+  }
+}
 
 ProjectCardGrid.propTypes = {
   imgSource: PropTypes.string.isRequired,
