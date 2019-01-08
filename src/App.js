@@ -14,7 +14,8 @@ class App extends Component {
   selectCourse = courseName => {
     console.log(`Course toggled to: ${courseName.toLowerCase()}`);
     this.setState({
-      selectedCourse: `${courseName.toLowerCase()}`
+      selectedCourse: `${courseName.toLowerCase()}`,
+      entries: entries
     });
   };
 
