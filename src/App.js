@@ -20,7 +20,7 @@ class App extends Component {
     console.log(filteredEntries);
     this.setState({
       selectedCourse: `${courseName.toLowerCase()}`,
-      entries: entries
+      entries: filteredEntries
     });
   };
 
