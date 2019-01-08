@@ -38,7 +38,7 @@ class ProjectCardGrid extends Component {
 }
 
 ProjectCardGrid.propTypes = {
-  entries: PropTypes.array,
+  entries: PropTypes.array.isRequired,
   imgSource: PropTypes.string.isRequired,
   selectedCourse: PropTypes.string.isRequired,
   enrolledCourse: PropTypes.string.isRequired,
@@ -47,6 +47,7 @@ ProjectCardGrid.propTypes = {
 };
 
 ProjectCardGrid.defaultProps = {
+  entries: ["Waiting for data", "Waiting for data"],
   imgSource: "/images/tester-card.jpg",
   selectedCourse: "VectorFab",
   enrolledCourse: "VectorFab",
