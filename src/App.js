@@ -3,9 +3,11 @@ import styled from "styled-components";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProjectCardGrid from "./components/ProjectCardGrid";
+import { entries } from "./data";
 
 class App extends Component {
   state = {
+    entries: entries,
     selectedCourse: "VectorFab"
   };
 
@@ -20,7 +22,10 @@ class App extends Component {
     return (
       <AppWrapper>
         <Header toggleCourse={this.toggleCourse.bind(this)} />
-        <ProjectCardGrid selectedCourse={this.state.selectedCourse} />
+        <ProjectCardGrid
+          entries={this.state.entries}
+          selectedCourse={this.state.selectedCourse}
+        />
         <Footer />
       </AppWrapper>
     );

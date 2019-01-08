@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import ProjectCard from "./ProjectCard";
-import { entries } from "../data";
 
 class ProjectCardGrid extends Component {
   render() {
@@ -21,7 +20,7 @@ class ProjectCardGrid extends Component {
           <p>Stuff about game workshop</p>
         )}
         <MainGrid>
-          {entries.map(entry => (
+          {this.props.entries.map(entry => (
             <ProjectCard
               key={entry.id}
               imgSource={entry.imgSource}
@@ -36,6 +35,7 @@ class ProjectCardGrid extends Component {
 }
 
 ProjectCardGrid.propTypes = {
+  entries: PropTypes.array,
   imgSource: PropTypes.string.isRequired,
   selectedCourse: PropTypes.string.isRequired,
   enrolledCourse: PropTypes.string.isRequired,

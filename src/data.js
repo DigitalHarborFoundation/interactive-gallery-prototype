@@ -7,7 +7,7 @@ export const entries = [
     projectTitle: "My French Press",
     makerStatement:
       "A Organic latte, sugar grounds, medium extra con panna as turkish. Coffee id flavour mazagran cortado foam, aroma caffeine brewed caramelization froth americano. Mocha, pumpkin spice, half and half, redeye coffee caffeine in caffeine froth.prototype is a first model or version of something",
-    imgSource: "/images/tester-card.jpg"
+    imgSource: "/images/tester-typewriter-card.jpg"
   },
   {
     id: 2,

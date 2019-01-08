@@ -7,18 +7,18 @@ class ProjectCard extends Component {
     return (
       <CardWrapper>
         <ProjectImageContainer>
-          {this.props.imgSource !== "" ||
-          this.props.imgSource !== " " ||
-          this.props.imgSource !== null ||
-          this.props.imgSource !== undefined ? (
-            <ProjectImage
-              src={this.props.imgSource}
-              alt={this.props.imgSource}
-            />
-          ) : (
+          {this.props.imgSource === "" ||
+          this.props.imgSource === " " ||
+          this.props.imgSource === null ||
+          this.props.imgSource === undefined ? (
             <ProjectImage
               src="/images/tester-card.jpg"
               alt="French Press Coffee Maker"
+            />
+          ) : (
+            <ProjectImage
+              src={this.props.imgSource}
+              alt={this.props.imgSource}
             />
           )}
         </ProjectImageContainer>
@@ -55,10 +55,11 @@ const CardWrapper = styled.div`
   transition: all 0.5s ease-in-out;
 
   :hover {
-    box-shadow: rgba(39, 44, 49, 0.07) 8px 28px 50px, rgba(39, 44, 49, 0.04) 1px 6px 12px;
+    box-shadow: rgba(39, 44, 49, 0.07) 8px 28px 50px,
+      rgba(39, 44, 49, 0.04) 1px 6px 12px;
     transform: translate3D(0, -1px, 0) scale(1.02);
     cursor: pointer;
-
+  }
 `;
 
 const ProjectImageContainer = styled.div`
@@ -67,6 +68,8 @@ const ProjectImageContainer = styled.div`
 `;
 
 const ProjectImage = styled.img`
+  width: 100%;
+  max-height: 100%;
   border-radius: 10px;
 `;
 
