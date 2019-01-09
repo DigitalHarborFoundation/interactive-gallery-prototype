@@ -14,12 +14,11 @@ class Toggle extends Component {
   };
 
   render() {
-    return (
-      <React.Fragment>
-        {this.state.on && this.props.children}
-        <ToggleButton onClick={this.toggle}>Click me</ToggleButton>
-      </React.Fragment>
-    );
+    const { children } = this.props;
+    return children({
+      on: this.state.on,
+      toggle: this.toggle
+    });
   }
 }
 
