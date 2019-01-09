@@ -1,32 +1,46 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Toggle from "./Toggle";
+import ProjectModal from "./ProjectModal";
 
 class ProjectCard extends Component {
   render() {
     return (
-      <CardWrapper>
-        <ProjectImageContainer>
-          {this.props.imgSource === "" ||
-          this.props.imgSource === " " ||
-          this.props.imgSource === null ||
-          this.props.imgSource === undefined ? (
-            <ProjectImage
-              src="/images/tester-card.jpg"
-              alt="French Press Coffee Maker"
-            />
-          ) : (
-            <ProjectImage
-              src={this.props.imgSource}
-              alt={this.props.imgSource}
-            />
-          )}
-        </ProjectImageContainer>
-        <ProjectInfoContainer>
-          <YouthName>{this.props.youthName}</YouthName>
-          <ProjectSemester>{this.props.projectSemester}</ProjectSemester>
-        </ProjectInfoContainer>
-      </CardWrapper>
+      <Toggle>
+        {({ on, toggle }) => (
+          <React.Fragment>
+            <CardWrapper onClick={toggle}>
+              <ProjectModal
+                on={on}
+                toggle={toggle}
+                entries={this.props.entries}
+                selectedCourse={this.props.selectedCourse}
+              />
+              <ProjectImageContainer>
+                {this.props.imgSource === "" ||
+                this.props.imgSource === " " ||
+                this.props.imgSource === null ||
+                this.props.imgSource === undefined ? (
+                  <ProjectImage
+                    src="/images/tester-card.jpg"
+                    alt="French Press Coffee Maker"
+                  />
+                ) : (
+                  <ProjectImage
+                    src={this.props.imgSource}
+                    alt={this.props.imgSource}
+                  />
+                )}
+              </ProjectImageContainer>
+              <ProjectInfoContainer>
+                <YouthName>{this.props.youthName}</YouthName>
+                <ProjectSemester>{this.props.projectSemester}</ProjectSemester>
+              </ProjectInfoContainer>
+            </CardWrapper>
+          </React.Fragment>
+        )}
+      </Toggle>
     );
   }
 }

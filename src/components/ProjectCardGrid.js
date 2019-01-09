@@ -29,6 +29,9 @@ class ProjectCardGrid extends Component {
               imgSource={entry.imgSource}
               youthName={entry.youthName}
               projectSemester={entry.projectSemester}
+              entries={this.props.entries}
+              selectedCourse={this.props.selectedCourse}
+              makerStatement={entry.makerStatement}
             />
           ))}
         </MainGrid>
