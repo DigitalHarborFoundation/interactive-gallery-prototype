@@ -5,13 +5,14 @@ import Portal from "./Portal";
 
 class ProjectModal extends Component {
   render() {
-    const { children, toggle, on } = this.props;
+    const { toggle, on } = this.props;
     return (
       <Portal>
         {on && (
           <ModalWrapper>
+            <h2>{this.props.youthName}</h2>
+            <h3>{this.props.id}</h3>
             <ToggleButton onClick={toggle}>Close</ToggleButton>
-            {children}
           </ModalWrapper>
         )}
       </Portal>

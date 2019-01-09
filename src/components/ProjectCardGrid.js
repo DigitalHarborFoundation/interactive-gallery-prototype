@@ -26,11 +26,12 @@ class ProjectCardGrid extends Component {
           {this.props.entries.map(entry => (
             <ProjectCard
               key={entry.id}
+              id={entry.id}
+              entries={this.props.entries}
+              selectedCourse={this.props.selectedCourse}
               imgSource={entry.imgSource}
               youthName={entry.youthName}
               projectSemester={entry.projectSemester}
-              entries={this.props.entries}
-              selectedCourse={this.props.selectedCourse}
               makerStatement={entry.makerStatement}
             />
           ))}

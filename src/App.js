@@ -33,7 +33,6 @@ class App extends Component {
         <Toggle>
           {({ on, toggle }) => (
             <React.Fragment>
-              <button onClick={toggle}>Open Modal</button>
               <ProjectModal
                 on={on}
                 toggle={toggle}

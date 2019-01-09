@@ -10,12 +10,15 @@ class ProjectCard extends Component {
       <Toggle>
         {({ on, toggle }) => (
           <React.Fragment>
-            <CardWrapper onClick={toggle}>
+            <CardWrapper onClick={toggle.bind(this)}>
               <ProjectModal
                 on={on}
                 toggle={toggle}
+                key={this.props.id}
                 entries={this.props.entries}
                 selectedCourse={this.props.selectedCourse}
+                id={this.props.id}
+                youthName={this.props.youthName}
               />
               <ProjectImageContainer>
                 {this.props.imgSource === "" ||
