@@ -3,8 +3,7 @@ import styled from "styled-components";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProjectCardGrid from "./components/ProjectCardGrid";
-// import ProjectModal from "./components/ProjectModal";
-import Toggle from "./components/Toggle";
+import ProjectModal from "./components/ProjectModal";
 import { entries } from "./data";
 
 class App extends Component {
@@ -29,27 +28,16 @@ class App extends Component {
   render() {
     return (
       <AppWrapper>
-        {/*
-          <ProjectModal
-            entries={this.state.entries}
-            selectedCourse={this.state.selectedCourse}
-          />
-          */}
+        <ProjectModal
+          entries={this.state.entries}
+          selectedCourse={this.state.selectedCourse}
+        />
 
         <Header selectCourse={this.selectCourse.bind(this)} />
         <ProjectCardGrid
           entries={this.state.entries}
           selectedCourse={this.state.selectedCourse}
         />
-        <Toggle>
-          {({ on, toggle }) => (
-            <React.Fragment>
-              {on && <h2>Test from render prop</h2>}
-
-              <button onClick={toggle}>Test Button</button>
-            </React.Fragment>
-          )}
-        </Toggle>
         <Footer />
       </AppWrapper>
     );

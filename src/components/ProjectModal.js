@@ -2,6 +2,47 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Portal from "./Portal";
+import Toggle from "./Toggle";
+
+class ProjectModal extends Component {
+  render() {
+    return (
+      <Portal>
+        <ModalWrapper>
+          <Toggle>
+            {({ on, toggle }) => (
+              <React.Fragment>
+                {on && <h2>Test from render prop</h2>}
+
+                <button onClick={toggle}>Test Button</button>
+              </React.Fragment>
+            )}
+          </Toggle>
+        </ModalWrapper>
+      </Portal>
+    );
+  }
+}
+
+export default ProjectModal;
+
+const ModalWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40vh;
+  left: 10vw;
+  width: 75%;
+  height: 60%;
+  background: papayawhip;
+`;
+
+{
+  /*
+
+
 
 class ProjectModal extends Component {
   render() {
@@ -49,18 +90,7 @@ class ProjectModal extends Component {
 
 export default ProjectModal;
 
-const ModalWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 40vh;
-  left: 10vw;
-  width: 75%;
-  height: 60%;
-  background: papayawhip;
-`;
+
 
 const CardWrapper = styled.div`
   display: flex;
@@ -131,3 +161,5 @@ const MakerStatement = styled.p`
 `;
 
 const CourseName = styled.p``;
+*/
+}
