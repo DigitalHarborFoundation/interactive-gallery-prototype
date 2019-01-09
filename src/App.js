@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProjectCardGrid from "./components/ProjectCardGrid";
 // import ProjectModal from "./components/ProjectModal";
-import Toggle from "./components/Toggle";
+import Toggle from "./components/ToggleRenderProps";
 import { entries } from "./data";
 
 class App extends Component {
@@ -41,9 +41,15 @@ class App extends Component {
           entries={this.state.entries}
           selectedCourse={this.state.selectedCourse}
         />
-        <Toggle>
-          <h2>Toggle Tester</h2>
-        </Toggle>
+        <Toggle
+          render={({ on, toggle }) => (
+            <React.Fragment>
+              {on && <h2>Test from render prop</h2>}
+
+              <button onClick={toggle}>Test Button</button>
+            </React.Fragment>
+          )}
+        />
         <Footer />
       </AppWrapper>
     );
