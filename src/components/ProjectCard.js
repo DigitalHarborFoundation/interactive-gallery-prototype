@@ -14,11 +14,12 @@ class ProjectCard extends Component {
               <ProjectModal
                 on={on}
                 toggle={toggle}
-                key={this.props.id}
-                entries={this.props.entries}
-                selectedCourse={this.props.selectedCourse}
                 id={this.props.id}
                 youthName={this.props.youthName}
+                projectTitle={this.props.projectTitle}
+                enrolledCourse={this.props.enrolledCourse}
+                imgSource={this.props.imgSource}
+                makerStatement={this.props.makerStatement}
               />
               <ProjectImageContainer>
                 {this.props.imgSource === "" ||

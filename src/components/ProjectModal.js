@@ -11,7 +11,19 @@ class ProjectModal extends Component {
         {on && (
           <ModalWrapper>
             <h2>{this.props.youthName}</h2>
-            <h3>{this.props.id}</h3>
+            <h4>{this.props.enrolledCourse}</h4>
+            {this.props.imgSource === "" ||
+            this.props.imgSource === " " ||
+            this.props.imgSource === null ||
+            this.props.imgSource === undefined ? (
+              <img
+                src="/images/tester-card.jpg"
+                alt="French Press Coffee Maker"
+              />
+            ) : (
+              <img src={this.props.imgSource} alt={this.props.imgSource} />
+            )}
+            <p>{this.props.makerStatement}</p>
             <ToggleButton onClick={toggle}>Close</ToggleButton>
           </ModalWrapper>
         )}
