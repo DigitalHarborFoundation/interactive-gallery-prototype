@@ -17,7 +17,7 @@ class Toggle extends Component {
     return (
       <React.Fragment>
         {this.state.on && <h1>Toggle Tester</h1>}
-        <ToggleButton onClick={this.toggle} />
+        <ToggleButton onClick={this.toggle}>Click me</ToggleButton>
       </React.Fragment>
     );
   }
@@ -27,10 +27,10 @@ export default Toggle;
 
 const ToggleButton = styled.button`
   width: 24rem;
-  border: 2px solid #fafafa;
+  border: 2px solid #2d2a2a;
   border-radius: 15px;
-  background-color: rgba(196, 196, 196, 0);
-  color: #fafafa;
+
+  color: #2d2a2a;
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 300;
