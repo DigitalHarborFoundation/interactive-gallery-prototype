@@ -8,8 +8,12 @@ class ProjectModal extends Component {
     const { children, toggle, on } = this.props;
     return (
       <Portal>
-        <ToggleButton>Close</ToggleButton>
-        <ModalWrapper>{children}</ModalWrapper>
+        {on && (
+          <ModalWrapper>
+            <ToggleButton onClick={toggle}>Close</ToggleButton>
+            {children}
+          </ModalWrapper>
+        )}
       </Portal>
     );
   }
@@ -34,7 +38,7 @@ const ToggleButton = styled.button`
   width: 24rem;
   border: 2px solid #2d2a2a;
   border-radius: 15px;
-
+  background-color: rgba(0, 0, 0, 0);
   color: #2d2a2a;
   text-transform: uppercase;
   font-size: 2rem;
@@ -44,8 +48,8 @@ const ToggleButton = styled.button`
   transition: all ease 0.5s;
 
   &:hover {
-    border: 2px solid #0091c9;
-    color: #0091c9;
+    border: 2px solid #fafafa;
+    color: #fafafa;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }

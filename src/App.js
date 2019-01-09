@@ -29,18 +29,20 @@ class App extends Component {
   render() {
     return (
       <AppWrapper>
+        <Header selectCourse={this.selectCourse.bind(this)} />
         <Toggle>
           {({ on, toggle }) => (
-            <ProjectModal
-              on={on}
-              toggle={toggle}
-              entries={this.state.entries}
-              selectedCourse={this.state.selectedCourse}
-            />
+            <React.Fragment>
+              <button onClick={toggle}>Open Modal</button>
+              <ProjectModal
+                on={on}
+                toggle={toggle}
+                entries={this.state.entries}
+                selectedCourse={this.state.selectedCourse}
+              />
+            </React.Fragment>
           )}
         </Toggle>
-
-        <Header selectCourse={this.selectCourse.bind(this)} />
         <ProjectCardGrid
           entries={this.state.entries}
           selectedCourse={this.state.selectedCourse}
