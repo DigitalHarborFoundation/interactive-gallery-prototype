@@ -41,7 +41,9 @@ class App extends Component {
           entries={this.state.entries}
           selectedCourse={this.state.selectedCourse}
         />
-        <Toggle />
+        <Toggle>
+          <h2>Toggle Tester</h2>
+        </Toggle>
         <Footer />
       </AppWrapper>
     );

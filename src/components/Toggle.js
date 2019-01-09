@@ -16,7 +16,7 @@ class Toggle extends Component {
   render() {
     return (
       <React.Fragment>
-        {this.state.on && <h1>Toggle Tester</h1>}
+        {this.state.on && this.props.children}
         <ToggleButton onClick={this.toggle}>Click me</ToggleButton>
       </React.Fragment>
     );
