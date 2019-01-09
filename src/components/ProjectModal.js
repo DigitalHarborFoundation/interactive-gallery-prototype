@@ -2,23 +2,14 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Portal from "./Portal";
-import Toggle from "./Toggle";
 
 class ProjectModal extends Component {
   render() {
+    const { children, toggle, on } = this.props;
     return (
       <Portal>
-        <ModalWrapper>
-          <Toggle>
-            {({ on, toggle }) => (
-              <React.Fragment>
-                {on && <h2>Test from render prop</h2>}
-
-                <button onClick={toggle}>Test Button</button>
-              </React.Fragment>
-            )}
-          </Toggle>
-        </ModalWrapper>
+        <ToggleButton>Close</ToggleButton>
+        <ModalWrapper>{children}</ModalWrapper>
       </Portal>
     );
   }
@@ -36,7 +27,32 @@ const ModalWrapper = styled.div`
   left: 10vw;
   width: 75%;
   height: 60%;
-  background: papayawhip;
+  background: palevioletred;
+`;
+
+const ToggleButton = styled.button`
+  width: 24rem;
+  border: 2px solid #2d2a2a;
+  border-radius: 15px;
+
+  color: #2d2a2a;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 1.6rem 2.4rem;
+  text-align: center;
+  transition: all ease 0.5s;
+
+  &:hover {
+    border: 2px solid #0091c9;
+    color: #0091c9;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &:focus {
+    outline: 0;
+  }
 `;
 
 {
