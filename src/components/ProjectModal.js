@@ -11,39 +11,41 @@ class ProjectModal extends Component {
       <Portal>
         {on && (
           <ModalWrapper>
-            <ModalImageContainer>
-              {this.props.imgSource === "" ||
-              this.props.imgSource === " " ||
-              this.props.imgSource === null ||
-              this.props.imgSource === undefined ? (
-                <ProjectImage
-                  src="/images/tester-card.jpg"
-                  alt="French Press Coffee Maker"
-                />
-              ) : (
-                <ProjectImage
-                  src={this.props.imgSource}
-                  alt={this.props.imgSource}
-                />
-              )}
-            </ModalImageContainer>
-            <ProjectInfoContainer>
-              <ProjectMetaContainer>
-                <ProjectTitle>{this.props.projectTitle}</ProjectTitle>
-                <YouthInfoContainer>
-                  <YouthInfoItem>{this.props.youthName}</YouthInfoItem>
-                  <Separator
-                    color="#5c5f5f"
-                    fontSize="2rem"
-                    paddingLeft="1rem"
-                    paddingRight="1rem"
+            <ModalCard>
+              <ModalImageContainer>
+                {this.props.imgSource === "" ||
+                this.props.imgSource === " " ||
+                this.props.imgSource === null ||
+                this.props.imgSource === undefined ? (
+                  <ProjectImage
+                    src="/images/tester-card.jpg"
+                    alt="French Press Coffee Maker"
                   />
-                  <YouthInfoItem>{this.props.projectSemester}</YouthInfoItem>
-                </YouthInfoContainer>
-              </ProjectMetaContainer>
-              <MakerStatement>{this.props.makerStatement}</MakerStatement>
-            </ProjectInfoContainer>
-            {/*<ToggleButton onClick={toggle}>Close</ToggleButton> */}
+                ) : (
+                  <ProjectImage
+                    src={this.props.imgSource}
+                    alt={this.props.imgSource}
+                  />
+                )}
+              </ModalImageContainer>
+              <ProjectInfoContainer>
+                <ProjectMetaContainer>
+                  <ProjectTitle>{this.props.projectTitle}</ProjectTitle>
+                  <YouthInfoContainer>
+                    <YouthInfoItem>{this.props.youthName}</YouthInfoItem>
+                    <Separator
+                      color="#5c5f5f"
+                      fontSize="2rem"
+                      paddingLeft="1rem"
+                      paddingRight="1rem"
+                    />
+                    <YouthInfoItem>{this.props.projectSemester}</YouthInfoItem>
+                  </YouthInfoContainer>
+                </ProjectMetaContainer>
+                <MakerStatement>{this.props.makerStatement}</MakerStatement>
+              </ProjectInfoContainer>
+              {/*<ToggleButton onClick={toggle}>Close</ToggleButton> */}
+            </ModalCard>
           </ModalWrapper>
         )}
       </Portal>
@@ -73,14 +75,24 @@ export default ProjectModal;
 
 const ModalWrapper = styled.div`
   display: flex;
-  flex-direction: row;
-  position: absolute;
   justify-content: center;
   align-items: center;
-  top: 40vh;
-  left: 10vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: papayawhip;
+`;
+
+const ModalCard = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 80%;
-  height: 80%;
+  height: auto;
+  position: relative;
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
