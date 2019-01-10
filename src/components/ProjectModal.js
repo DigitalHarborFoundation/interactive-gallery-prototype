@@ -32,7 +32,11 @@ class ProjectModal extends Component {
                 <ProjectTitle>{this.props.projectTitle}</ProjectTitle>
                 <YouthInfoContainer>
                   <YouthInfoItem>{this.props.youthName}</YouthInfoItem>
-                  <Separator color="#5c5f5f" />
+                  <Separator
+                    color="#5c5f5f"
+                    paddingLeft="1rem"
+                    paddingRight="1rem"
+                  />
                   <YouthInfoItem>{this.props.projectSemester}</YouthInfoItem>
                 </YouthInfoContainer>
               </ProjectMetaContainer>
@@ -107,7 +111,7 @@ const YouthInfoContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: space-evenly;
 `;
 
 const YouthInfoItem = styled.span`
