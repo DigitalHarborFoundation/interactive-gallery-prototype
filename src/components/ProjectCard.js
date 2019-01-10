@@ -17,6 +17,7 @@ class ProjectCard extends Component {
                 id={this.props.id}
                 youthName={this.props.youthName}
                 projectTitle={this.props.projectTitle}
+                projectSemester={this.props.projectSemester}
                 enrolledCourse={this.props.enrolledCourse}
                 imgSource={this.props.imgSource}
                 makerStatement={this.props.makerStatement}

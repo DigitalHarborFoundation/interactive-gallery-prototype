@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Portal from "./Portal";
+import Separator from "./Separator";
 
 class ProjectModal extends Component {
   render() {
@@ -26,11 +27,19 @@ class ProjectModal extends Component {
                 />
               )}
             </ModalImageContainer>
-            <h2>{this.props.youthName}</h2>
-            <h4>{this.props.enrolledCourse}</h4>
+            <ProjectInfoContainer>
+              <ProjectMetaContainer>
+                <ProjectTitle>{this.props.projectTitle}</ProjectTitle>
+                <YouthInfoContainer>
+                  <YouthInfoItem>{this.props.youthName}</YouthInfoItem>
+                  <Separator color="#5c5f5f" />
+                  <YouthInfoItem>{this.props.projectSemester}</YouthInfoItem>
+                </YouthInfoContainer>
+              </ProjectMetaContainer>
 
-            <p>{this.props.makerStatement}</p>
-            <ToggleButton onClick={toggle}>Close</ToggleButton>
+              <p>{this.props.makerStatement}</p>
+            </ProjectInfoContainer>
+            {/*<ToggleButton onClick={toggle}>Close</ToggleButton> */}
           </ModalWrapper>
         )}
       </Portal>
@@ -42,15 +51,33 @@ export default ProjectModal;
 
 const ModalWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 40vh;
   left: 10vw;
   width: 80%;
-  height: 80%;
-  background: palevioletred;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+`;
+
+const ModalImageContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 4rem;
+`;
+
+const ProjectImage = styled.img`
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  border-radius: 10px;
 `;
 
 const ProjectInfoContainer = styled.div`
@@ -62,15 +89,30 @@ const ProjectInfoContainer = styled.div`
   width: 80%;
 `;
 
-const ProjectImage = styled.img`
-  width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
+const ProjectMetaContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
-const ModalImageContainer = styled.div`
-  width: 100%;
-  height: 100%;
+const ProjectTitle = styled.h2`
+  color: #000;
+  font-size: 2.4rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+`;
+
+const YouthInfoContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
+const YouthInfoItem = styled.span`
+  color: #5c5f5f;
+  font-size: 1.2rem;
 `;
 
 const ToggleButton = styled.button`

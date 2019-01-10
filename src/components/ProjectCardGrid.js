@@ -30,6 +30,7 @@ class ProjectCardGrid extends Component {
               imgSource={entry.imgSource}
               enrolledCourse={entry.enrolledCourse}
               youthName={entry.youthName}
+              projectTitle={entry.projectTitle}
               projectSemester={entry.projectSemester}
               makerStatement={entry.makerStatement}
             />
