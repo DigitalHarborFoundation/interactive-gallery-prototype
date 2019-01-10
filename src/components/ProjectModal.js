@@ -42,8 +42,8 @@ const ModalWrapper = styled.div`
   position: absolute;
   top: 40vh;
   left: 10vw;
-  width: 75%;
-  height: 60%;
+  width: 80%;
+  height: 80%;
   background: palevioletred;
 `;
 
