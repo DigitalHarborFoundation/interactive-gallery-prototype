@@ -14,12 +14,9 @@ class App extends Component {
   };
 
   selectCourse = courseName => {
-    console.log(`Course toggled to: ${courseName.toLowerCase()}`);
     let filteredEntries = entries.filter(
       entry => entry.enrolledCourse.toLowerCase() === courseName.toLowerCase()
     );
-    console.log(`filtering content for: ${courseName}`);
-    console.log(filteredEntries);
     this.setState({
       selectedCourse: `${courseName.toLowerCase()}`,
       entries: filteredEntries

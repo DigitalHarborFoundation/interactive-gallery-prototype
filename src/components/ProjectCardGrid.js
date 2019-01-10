@@ -10,18 +10,6 @@ class ProjectCardGrid extends Component {
   render() {
     return (
       <ContentWrapper>
-        <h2>This is for testing purposes:</h2>
-        <h3>
-          Current course is{" "}
-          {this.props.selectedCourse.toLowerCase() === "vectorfab"
-            ? "VectorFab"
-            : "Game Workshop"}{" "}
-        </h3>
-        {this.props.selectedCourse.toLowerCase() === "vectorfab" ? (
-          <p>Stuff about vectorfab</p>
-        ) : (
-          <p>Stuff about game workshop</p>
-        )}
         <MainGrid>
           {this.props.entries.map(entry => (
             <ProjectCard
