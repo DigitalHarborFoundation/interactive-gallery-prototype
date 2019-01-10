@@ -18,6 +18,6 @@ export default Separator;
 
 const SeparatorWrapper = styled.span`
   color: ${props => (props.color ? props.color : "blue")};
-  padding-left: ${props => (props.paddingLeft ? props.paddingLeft : 0)}
-  padding-right: ${props => (props.paddingRight ? props.paddingRight : 0)}
+  padding-left: ${props => (props.paddingLeft ? props.paddingLeft : 0)};
+  padding-right: ${props => (props.paddingRight ? props.paddingRight : 0)};
 `;

@@ -41,7 +41,7 @@ class ProjectModal extends Component {
                 </YouthInfoContainer>
               </ProjectMetaContainer>
 
-              <p>{this.props.makerStatement}</p>
+              <MakerStatement>{this.props.makerStatement}</MakerStatement>
             </ProjectInfoContainer>
             {/*<ToggleButton onClick={toggle}>Close</ToggleButton> */}
           </ModalWrapper>
@@ -74,7 +74,6 @@ const ModalImageContainer = styled.div`
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 0;
-  padding-right: 4rem;
 `;
 
 const ProjectImage = styled.img`
@@ -82,6 +81,7 @@ const ProjectImage = styled.img`
   height: 100%;
   max-height: 100%;
   border-radius: 10px;
+  box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
 `;
 
 const ProjectInfoContainer = styled.div`
@@ -117,6 +117,13 @@ const YouthInfoContainer = styled.div`
 const YouthInfoItem = styled.span`
   color: #5c5f5f;
   font-size: 1.2rem;
+`;
+
+const MakerStatement = styled.p`
+  color: #2d2a2a;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 0 4rem;
 `;
 
 const ToggleButton = styled.button`
