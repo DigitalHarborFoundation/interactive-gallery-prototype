@@ -34,13 +34,13 @@ class ProjectModal extends Component {
                   <YouthInfoItem>{this.props.youthName}</YouthInfoItem>
                   <Separator
                     color="#5c5f5f"
+                    fontSize="2rem"
                     paddingLeft="1rem"
                     paddingRight="1rem"
                   />
                   <YouthInfoItem>{this.props.projectSemester}</YouthInfoItem>
                 </YouthInfoContainer>
               </ProjectMetaContainer>
-
               <MakerStatement>{this.props.makerStatement}</MakerStatement>
             </ProjectInfoContainer>
             {/*<ToggleButton onClick={toggle}>Close</ToggleButton> */}
@@ -56,9 +56,9 @@ export default ProjectModal;
 const ModalWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  position: absolute;
   justify-content: center;
   align-items: center;
-  position: absolute;
   top: 40vh;
   left: 10vw;
   width: 80%;
@@ -70,16 +70,20 @@ const ModalWrapper = styled.div`
 const ModalImageContainer = styled.div`
   width: 100%;
   height: 100%;
-  margin: 0;
+  margin: auto;
+  background: red;
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 0;
+  border-radius: 10px;
 `;
 
 const ProjectImage = styled.img`
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
   border-radius: 10px;
   box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
 `;
@@ -102,7 +106,7 @@ const ProjectMetaContainer = styled.div`
 
 const ProjectTitle = styled.h2`
   color: #000;
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   margin-bottom: 0;
   padding-bottom: 0;
 `;
@@ -111,19 +115,20 @@ const YouthInfoContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: space-evenly;
+  align-items: center;
 `;
 
 const YouthInfoItem = styled.span`
   color: #5c5f5f;
-  font-size: 1.2rem;
+  font-size: 2rem;
 `;
 
 const MakerStatement = styled.p`
   color: #2d2a2a;
-  font-size: 1.2rem;
+  font-size: 2rem;
+  line-height: 2.4rem;
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 4rem 4rem;
 `;
 
 const ToggleButton = styled.button`
