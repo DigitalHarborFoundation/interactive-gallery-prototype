@@ -27,9 +27,6 @@ class ProjectCardGrid extends Component {
             <ProjectCard
               key={entry.id}
               id={entry.id}
-              makerStatement={entry.makerStatement}
-              entries={this.props.entries}
-              selectedCourse={this.props.selectedCourse}
               imgSource={entry.imgSource}
               enrolledCourse={entry.enrolledCourse}
               youthName={entry.youthName}
