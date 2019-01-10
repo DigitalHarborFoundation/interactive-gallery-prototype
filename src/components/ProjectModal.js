@@ -51,6 +51,24 @@ class ProjectModal extends Component {
   }
 }
 
+ProjectModal.propTypes = {
+  entries: PropTypes.array.isRequired,
+  imgSource: PropTypes.string.isRequired,
+  selectedCourse: PropTypes.string.isRequired,
+  enrolledCourse: PropTypes.string.isRequired,
+  youthName: PropTypes.string.isRequired,
+  projectSemester: PropTypes.string.isRequired
+};
+
+ProjectModal.defaultProps = {
+  entries: ["Waiting for data", "Waiting for data"],
+  imgSource: "/images/tester-card.jpg",
+  selectedCourse: "VectorFab",
+  enrolledCourse: "VectorFab",
+  youthName: "DHF Youth",
+  projectSemester: "Fall 2018"
+};
+
 export default ProjectModal;
 
 const ModalWrapper = styled.div`
