@@ -10,19 +10,25 @@ class ProjectModal extends Component {
       <Portal>
         {on && (
           <ModalWrapper>
+            <ModalImageContainer>
+              {this.props.imgSource === "" ||
+              this.props.imgSource === " " ||
+              this.props.imgSource === null ||
+              this.props.imgSource === undefined ? (
+                <ProjectImage
+                  src="/images/tester-card.jpg"
+                  alt="French Press Coffee Maker"
+                />
+              ) : (
+                <ProjectImage
+                  src={this.props.imgSource}
+                  alt={this.props.imgSource}
+                />
+              )}
+            </ModalImageContainer>
             <h2>{this.props.youthName}</h2>
             <h4>{this.props.enrolledCourse}</h4>
-            {this.props.imgSource === "" ||
-            this.props.imgSource === " " ||
-            this.props.imgSource === null ||
-            this.props.imgSource === undefined ? (
-              <img
-                src="/images/tester-card.jpg"
-                alt="French Press Coffee Maker"
-              />
-            ) : (
-              <img src={this.props.imgSource} alt={this.props.imgSource} />
-            )}
+
             <p>{this.props.makerStatement}</p>
             <ToggleButton onClick={toggle}>Close</ToggleButton>
           </ModalWrapper>
@@ -45,6 +51,26 @@ const ModalWrapper = styled.div`
   width: 80%;
   height: 80%;
   background: palevioletred;
+`;
+
+const ProjectInfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 80%;
+`;
+
+const ProjectImage = styled.img`
+  width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+`;
+
+const ModalImageContainer = styled.div`
+  width: 100%;
+  height: 100%;
 `;
 
 const ToggleButton = styled.button`
