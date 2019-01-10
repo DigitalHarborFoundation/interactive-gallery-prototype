@@ -83,15 +83,12 @@ const CardWrapper = styled.div`
 
 const ProjectImageContainer = styled.div`
   width: 100%;
-  height: 100%;
   margin: auto;
-  background: papayawhip;
 `;
 
 const ProjectImage = styled.img`
   width: 100%;
   height: auto;
-  max-height: 100%;
   border-radius: 10px;
 `;
 
