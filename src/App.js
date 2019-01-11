@@ -22,6 +22,7 @@ class App extends Component {
     let filteredEntries = entries.filter(
       entry => entry.enrolledCourse.toLowerCase() === courseName.toLowerCase()
     );
+    this.parallax.scrollTo(1);
     this.setState({
       selectedCourse: `${courseName.toLowerCase()}`,
       entries: filteredEntries
@@ -31,59 +32,71 @@ class App extends Component {
   render() {
     return (
       <AppWrapper>
-        <Masthead>
-          <LogoWrapper>
-            <DHFTitle>Digital Harbor Foundation</DHFTitle>
-          </LogoWrapper>
-          <CTAContainer>
-            <ProjectTitle>Interactive Project Gallery</ProjectTitle>
-            <ButtonContainer>
-              <GhostButton
-                onClick={this.selectCourse.bind(this, "VectorFab")}
-                onMouseOver={this.mouseOver}
-                onMouseOut={this.mouseOut}
-              >
-                VectorFab
-              </GhostButton>
-              <GhostButton
-                onClick={this.selectCourse.bind(this, "Game Workshop")}
-                onMouseOver={this.mouseOver}
-                onMouseOut={this.mouseOut}
-              >
-                Game Workshop
-              </GhostButton>
-            </ButtonContainer>
-            {this.state.hovering && (
-              <CourseDescriptionContainer>
-                <CourseDescription>
-                  Lasers! Vectors! Computers and plotters! Explore the exciting
-                  possibilities of fabrication with vector graphics! In this
-                  course you will learn the basics of vector design with the
-                  intention of fabrication. You’ll practice designing for
-                  multiple fabrication tools and equipment, such as laser
-                  cutters and plotter devices.
-                </CourseDescription>
-              </CourseDescriptionContainer>
+        <Parallax
+          pages={2}
+          scrolling={true}
+          vertical
+          ref={ref => (this.parallax = ref)}
+        >
+          <ParallaxLayer offset={0} speed={0.5}>
+            <Masthead>
+              <LogoWrapper>
+                <DHFTitle>Digital Harbor Foundation</DHFTitle>
+              </LogoWrapper>
+
+              <CTAContainer>
+                <ProjectTitle>Interactive Project Gallery</ProjectTitle>
+                <ButtonContainer>
+                  <GhostButton
+                    onClick={this.selectCourse.bind(this, "VectorFab")}
+                    onMouseOver={this.mouseOver}
+                    onMouseOut={this.mouseOut}
+                  >
+                    VectorFab
+                  </GhostButton>
+                  <GhostButton
+                    onClick={this.selectCourse.bind(this, "Game Workshop")}
+                    onMouseOver={this.mouseOver}
+                    onMouseOut={this.mouseOut}
+                  >
+                    Game Workshop
+                  </GhostButton>
+                </ButtonContainer>
+                {this.state.hovering && (
+                  <CourseDescriptionContainer>
+                    <CourseDescription>
+                      Lasers! Vectors! Computers and plotters! Explore the
+                      exciting possibilities of fabrication with vector
+                      graphics! In this course you will learn the basics of
+                      vector design with the intention of fabrication. You’ll
+                      practice designing for multiple fabrication tools and
+                      equipment, such as laser cutters and plotter devices.
+                    </CourseDescription>
+                  </CourseDescriptionContainer>
+                )}
+              </CTAContainer>
+            </Masthead>
+          </ParallaxLayer>
+          <Toggle>
+            {({ on, toggle }) => (
+              <React.Fragment>
+                <ProjectModal
+                  on={on}
+                  toggle={toggle}
+                  entries={this.state.entries}
+                  selectedCourse={this.state.selectedCourse}
+                />
+              </React.Fragment>
             )}
-          </CTAContainer>
-        </Masthead>
-        <Toggle>
-          {({ on, toggle }) => (
-            <React.Fragment>
-              <ProjectModal
-                on={on}
-                toggle={toggle}
-                entries={this.state.entries}
-                selectedCourse={this.state.selectedCourse}
-              />
-            </React.Fragment>
-          )}
-        </Toggle>
-        <ProjectCardGrid
-          entries={this.state.entries}
-          selectedCourse={this.state.selectedCourse}
-        />
-        <Footer />
+          </Toggle>
+          <ParallaxLayer offset={1} speed={0.1}>
+            <ProjectCardGrid
+              entries={this.state.entries}
+              selectedCourse={this.state.selectedCourse}
+            />
+          </ParallaxLayer>
+          <Footer />
+        </Parallax>
       </AppWrapper>
     );
   }
