@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { Spring, config } from "react-spring";
 import PropTypes from "prop-types";
 import ProjectCard from "./ProjectCard";
 
@@ -10,20 +11,35 @@ class ProjectCardGrid extends Component {
   render() {
     return (
       <ContentWrapper>
-        <MainGrid>
-          {this.props.entries.map(entry => (
-            <ProjectCard
-              key={entry.id}
-              id={entry.id}
-              imgSource={entry.imgSource}
-              enrolledCourse={entry.enrolledCourse}
-              youthName={entry.youthName}
-              projectTitle={entry.projectTitle}
-              projectSemester={entry.projectSemester}
-              makerStatement={entry.makerStatement}
-            />
-          ))}
-        </MainGrid>
+        <Spring
+          config={{ tension: 280, friction: 60 }}
+          from={{
+            opacity: 0,
+            transform: "translate3d(200px,100px,0) scale(1.5) rotateX(60deg)"
+          }}
+          to={{
+            opacity: 1,
+            transform: "translate3d(0,0,0) scale(1) rotateX(0deg)"
+          }}
+          key={this.props.selectedCourse}
+        >
+          {props => (
+            <MainGrid style={props}>
+              {this.props.entries.map(entry => (
+                <ProjectCard
+                  key={entry.id}
+                  id={entry.id}
+                  imgSource={entry.imgSource}
+                  enrolledCourse={entry.enrolledCourse}
+                  youthName={entry.youthName}
+                  projectTitle={entry.projectTitle}
+                  projectSemester={entry.projectSemester}
+                  makerStatement={entry.makerStatement}
+                />
+              ))}
+            </MainGrid>
+          )}
+        </Spring>
       </ContentWrapper>
     );
   }
