@@ -49,7 +49,6 @@ class ProjectModal extends Component {
                 </ProjectMetaContainer>
                 <MakerStatement>{this.props.makerStatement}</MakerStatement>
               </ProjectInfoContainer>
-              {/*<ToggleButton onClick={toggle}>Close</ToggleButton> */}
             </ModalCard>
             <ModalBackground onClick={toggle} />
           </ModalWrapper>

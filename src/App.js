@@ -9,7 +9,7 @@ import { entries } from "./data";
 
 class App extends Component {
   state = {
-    entries: entries,
+    entries: [],
     selectedCourse: "VectorFab"
   };
 
@@ -27,6 +27,7 @@ class App extends Component {
     return (
       <AppWrapper>
         <Header selectCourse={this.selectCourse.bind(this)} />
+
         <Toggle>
           {({ on, toggle }) => (
             <React.Fragment>
