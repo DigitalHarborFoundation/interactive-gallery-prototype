@@ -82,7 +82,8 @@ const GhostButton = styled.button`
   color: #fafafa;
   text-transform: uppercase;
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
   padding: 1.6rem 2.4rem;
   text-align: center;
   transition: all ease 0.5s;
