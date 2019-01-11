@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-
+import { Transition } from "react-spring";
 import Portal from "./Portal";
 import Separator from "./Separator";
 import Icon from "./Icon";
@@ -11,48 +11,60 @@ class ProjectModal extends Component {
     const { toggle, on } = this.props;
     return (
       <Portal>
-        {on && (
-          <ModalWrapper>
-            <ModalCard>
-              <CloseButton onClick={toggle}>
-                <Icon color="#2d2a2a" type="close" />
-              </CloseButton>
-              <ModalImageContainer>
-                {this.props.imgSource === "" ||
-                this.props.imgSource === " " ||
-                this.props.imgSource === null ||
-                this.props.imgSource === undefined ? (
-                  <ProjectImage
-                    src="/images/tester-card.jpg"
-                    alt="French Press Coffee Maker"
-                  />
-                ) : (
-                  <ProjectImage
-                    src={this.props.imgSource}
-                    alt={this.props.imgSource}
-                  />
-                )}
-              </ModalImageContainer>
-              <ProjectInfoContainer>
-                <ProjectMetaContainer>
-                  <ProjectTitle>{this.props.projectTitle}</ProjectTitle>
-                  <YouthInfoContainer>
-                    <YouthInfoItem>{this.props.youthName}</YouthInfoItem>
-                    <Separator
-                      color="#5c5f5f"
-                      fontSize="2rem"
-                      paddingLeft="1rem"
-                      paddingRight="1rem"
-                    />
-                    <YouthInfoItem>{this.props.projectSemester}</YouthInfoItem>
-                  </YouthInfoContainer>
-                </ProjectMetaContainer>
-                <MakerStatement>{this.props.makerStatement}</MakerStatement>
-              </ProjectInfoContainer>
-            </ModalCard>
-            <ModalBackground onClick={toggle} />
-          </ModalWrapper>
-        )}
+        <Transition
+          items={on}
+          from={{ opacity: 0 }}
+          enter={{ opacity: 1 }}
+          leave={{ opacity: 0 }}
+        >
+          {on =>
+            on &&
+            (styles => (
+              <ModalWrapper style={{ ...styles }}>
+                <ModalCard>
+                  <CloseButton onClick={toggle}>
+                    <Icon color="#2d2a2a" type="close" />
+                  </CloseButton>
+                  <ModalImageContainer>
+                    {this.props.imgSource === "" ||
+                    this.props.imgSource === " " ||
+                    this.props.imgSource === null ||
+                    this.props.imgSource === undefined ? (
+                      <ProjectImage
+                        src="/images/tester-card.jpg"
+                        alt="French Press Coffee Maker"
+                      />
+                    ) : (
+                      <ProjectImage
+                        src={this.props.imgSource}
+                        alt={this.props.imgSource}
+                      />
+                    )}
+                  </ModalImageContainer>
+                  <ProjectInfoContainer>
+                    <ProjectMetaContainer>
+                      <ProjectTitle>{this.props.projectTitle}</ProjectTitle>
+                      <YouthInfoContainer>
+                        <YouthInfoItem>{this.props.youthName}</YouthInfoItem>
+                        <Separator
+                          color="#5c5f5f"
+                          fontSize="2rem"
+                          paddingLeft="1rem"
+                          paddingRight="1rem"
+                        />
+                        <YouthInfoItem>
+                          {this.props.projectSemester}
+                        </YouthInfoItem>
+                      </YouthInfoContainer>
+                    </ProjectMetaContainer>
+                    <MakerStatement>{this.props.makerStatement}</MakerStatement>
+                  </ProjectInfoContainer>
+                </ModalCard>
+                <ModalBackground onClick={toggle} />
+              </ModalWrapper>
+            ))
+          }
+        </Transition>
       </Portal>
     );
   }

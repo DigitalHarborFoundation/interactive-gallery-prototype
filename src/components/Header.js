@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Parallax, ParallaxLayer } from "react-spring/addons";
 import heroImg from "../hero-img.jpg";
 
 const Header = props => (

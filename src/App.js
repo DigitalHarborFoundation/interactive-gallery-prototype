@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { Parallax, ParallaxLayer } from "react-spring/addons";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProjectCardGrid from "./components/ProjectCardGrid";
@@ -27,7 +28,6 @@ class App extends Component {
     return (
       <AppWrapper>
         <Header selectCourse={this.selectCourse.bind(this)} />
-
         <Toggle>
           {({ on, toggle }) => (
             <React.Fragment>
