@@ -10,7 +10,7 @@ import { entries } from "./data";
 class App extends Component {
   state = {
     entries: [],
-    selectedCourse: "VectorFab"
+    selectedCourse: ""
   };
 
   selectCourse = courseName => {
