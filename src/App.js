@@ -53,7 +53,18 @@ class App extends Component {
                 Game Workshop
               </GhostButton>
             </ButtonContainer>
-            {this.state.hovering && <h1>HOVERING</h1>}
+            {this.state.hovering && (
+              <CourseDescriptionContainer>
+                <CourseDescription>
+                  Lasers! Vectors! Computers and plotters! Explore the exciting
+                  possibilities of fabrication with vector graphics! In this
+                  course you will learn the basics of vector design with the
+                  intention of fabrication. You’ll practice designing for
+                  multiple fabrication tools and equipment, such as laser
+                  cutters and plotter devices.
+                </CourseDescription>
+              </CourseDescriptionContainer>
+            )}
           </CTAContainer>
         </Masthead>
         <Toggle>
@@ -131,6 +142,7 @@ const ProjectTitle = styled.h2`
 
 const ButtonContainer = styled.div`
   display: flex;
+  margin-bottom: 2rem;
   flex-direction: row;
   justify-items: center;
   align-items: center;
@@ -168,4 +180,21 @@ const GhostButton = styled.button`
   &:focus {
     outline: 0;
   }
+`;
+
+const CourseDescriptionContainer = styled.div`
+  background: rgba(45, 42, 42, 0.8);
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  transition: all ease-in-out 0.5s;
+  transform: translateY(8rem);
+`;
+
+const CourseDescription = styled.p`
+  color: #fafafa;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin: 0 auto;
+  padding: 4rem 4rem;
 `;
