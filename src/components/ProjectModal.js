@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Transition } from "react-spring";
+import { Transition, animated } from "react-spring";
 import Portal from "./Portal";
 import Separator from "./Separator";
 import Icon from "./Icon";
@@ -12,16 +12,24 @@ class ProjectModal extends Component {
     return (
       <Portal>
         <Transition
+          native
           items={on}
-          from={{ opacity: 0 }}
-          enter={{ opacity: 1 }}
-          leave={{ opacity: 0 }}
+          from={{ opacity: 0, bgOpacity: 0, y: -80 }}
+          enter={{ opacity: 1, bgOpacity: 0.85, y: 0 }}
+          leave={{ opacity: 0, bgOpacity: 0, y: -80 }}
         >
           {on =>
             on &&
             (styles => (
               <ModalWrapper>
-                <ModalCard style={{ ...styles }}>
+                <ModalCard
+                  style={{
+                    transform: styles.y.interpolate(
+                      y => `translate3d(0,${y}px,0)`
+                    ),
+                    ...styles
+                  }}
+                >
                   <CloseButton onClick={toggle}>
                     <Icon color="#2d2a2a" type="close" />
                   </CloseButton>
@@ -60,7 +68,14 @@ class ProjectModal extends Component {
                     <MakerStatement>{this.props.makerStatement}</MakerStatement>
                   </ProjectInfoContainer>
                 </ModalCard>
-                <ModalBackground style={{ ...styles }} onClick={toggle} />
+                <ModalBackground
+                  style={{
+                    opacity: styles.bgOpacity.interpolate(
+                      bgOpacity => bgOpacity
+                    )
+                  }}
+                  onClick={toggle}
+                />
               </ModalWrapper>
             ))
           }
@@ -101,17 +116,16 @@ const ModalWrapper = styled.div`
   height: 100%;
 `;
 
-const ModalBackground = styled.div`
+const ModalBackground = styled(animated.div)`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.85);
-  transition: background ease-in-out 1s;
 `;
 
-const ModalCard = styled.div`
+const ModalCard = styled(animated.div)`
   display: flex;
   flex-direction: row;
   justify-content: center;
