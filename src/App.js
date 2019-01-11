@@ -11,8 +11,12 @@ import heroImg from "./hero-img.jpg";
 class App extends Component {
   state = {
     entries: [],
-    selectedCourse: ""
+    selectedCourse: "",
+    hovering: false
   };
+
+  mouseOver = () => this.setState({ hovering: true });
+  mouseOut = () => this.setState({ hovering: false });
 
   selectCourse = courseName => {
     let filteredEntries = entries.filter(
@@ -34,15 +38,22 @@ class App extends Component {
           <CTAContainer>
             <ProjectTitle>Interactive Project Gallery</ProjectTitle>
             <ButtonContainer>
-              <GhostButton onClick={this.selectCourse.bind(this, "VectorFab")}>
+              <GhostButton
+                onClick={this.selectCourse.bind(this, "VectorFab")}
+                onMouseOver={this.mouseOver}
+                onMouseOut={this.mouseOut}
+              >
                 VectorFab
               </GhostButton>
               <GhostButton
                 onClick={this.selectCourse.bind(this, "Game Workshop")}
+                onMouseOver={this.mouseOver}
+                onMouseOut={this.mouseOut}
               >
                 Game Workshop
               </GhostButton>
             </ButtonContainer>
+            {this.state.hovering && <h1>HOVERING</h1>}
           </CTAContainer>
         </Masthead>
         <Toggle>
