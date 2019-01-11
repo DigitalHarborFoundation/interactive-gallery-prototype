@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Portal from "./Portal";
 import Separator from "./Separator";
+import Icon from "./Icon";
 
 class ProjectModal extends Component {
   render() {
@@ -12,6 +13,9 @@ class ProjectModal extends Component {
         {on && (
           <ModalWrapper>
             <ModalCard>
+              <CloseButton onClick={toggle}>
+                <Icon color="#2d2a2a" type="close" />
+              </CloseButton>
               <ModalImageContainer>
                 {this.props.imgSource === "" ||
                 this.props.imgSource === " " ||
@@ -171,6 +175,24 @@ const MakerStatement = styled.p`
   line-height: 2.4rem;
   margin: 0 auto;
   padding: 4rem 4rem;
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  transition: all ease 0.5s;
+  background: transparent;
+  padding: 1.2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 0;
+  }
 `;
 
 const ToggleButton = styled.button`
