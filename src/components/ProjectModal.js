@@ -20,8 +20,8 @@ class ProjectModal extends Component {
           {on =>
             on &&
             (styles => (
-              <ModalWrapper style={{ ...styles }}>
-                <ModalCard>
+              <ModalWrapper>
+                <ModalCard style={{ ...styles }}>
                   <CloseButton onClick={toggle}>
                     <Icon color="#2d2a2a" type="close" />
                   </CloseButton>
@@ -60,7 +60,7 @@ class ProjectModal extends Component {
                     <MakerStatement>{this.props.makerStatement}</MakerStatement>
                   </ProjectInfoContainer>
                 </ModalCard>
-                <ModalBackground onClick={toggle} />
+                <ModalBackground style={{ ...styles }} onClick={toggle} />
               </ModalWrapper>
             ))
           }
