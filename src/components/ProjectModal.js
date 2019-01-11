@@ -46,6 +46,7 @@ class ProjectModal extends Component {
               </ProjectInfoContainer>
               {/*<ToggleButton onClick={toggle}>Close</ToggleButton> */}
             </ModalCard>
+            <ModalBackground onClick={toggle} />
           </ModalWrapper>
         )}
       </Portal>
@@ -82,6 +83,14 @@ const ModalWrapper = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+`;
+
+const ModalBackground = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.85);
   transition: background ease-in-out 1s;
 `;
@@ -97,6 +106,7 @@ const ModalCard = styled.div`
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
+  z-index: 10;
 `;
 
 const ModalImageContainer = styled.div`
