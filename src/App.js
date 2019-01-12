@@ -38,7 +38,7 @@ class App extends Component {
           vertical
           ref={ref => (this.parallax = ref)}
         >
-          <ParallaxLayer offset={0} speed={0.5}>
+          <ParallaxLayer offset={0} speed={0.2}>
             <Masthead>
               <LogoWrapper>
                 <DHFTitle>Digital Harbor Foundation</DHFTitle>
@@ -62,6 +62,7 @@ class App extends Component {
                     Game Workshop
                   </GhostButton>
                 </ButtonContainer>
+                {/*
                 {this.state.hovering && (
                   <CourseDescriptionContainer>
                     <CourseDescription>
@@ -74,6 +75,7 @@ class App extends Component {
                     </CourseDescription>
                   </CourseDescriptionContainer>
                 )}
+                */}
               </CTAContainer>
             </Masthead>
           </ParallaxLayer>
@@ -89,13 +91,13 @@ class App extends Component {
               </React.Fragment>
             )}
           </Toggle>
-          <ParallaxLayer offset={1} speed={0.1}>
+          <ParallaxLayer offset={1} speed={0.2}>
             <ProjectCardGrid
               entries={this.state.entries}
               selectedCourse={this.state.selectedCourse}
             />
+            <Footer />
           </ParallaxLayer>
-          <Footer />
         </Parallax>
       </AppWrapper>
     );
