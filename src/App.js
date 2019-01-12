@@ -22,7 +22,7 @@ class App extends Component {
     let filteredEntries = entries.filter(
       entry => entry.enrolledCourse.toLowerCase() === courseName.toLowerCase()
     );
-    this.parallax.scrollTo(1);
+    // this.parallax.scrollTo(1);
     this.setState({
       selectedCourse: `${courseName.toLowerCase()}`,
       entries: filteredEntries
@@ -32,37 +32,39 @@ class App extends Component {
   render() {
     return (
       <AppWrapper>
+        {/*
         <Parallax
           pages={2}
           scrolling={true}
           vertical
           ref={ref => (this.parallax = ref)}
         >
-          <ParallaxLayer offset={0} speed={0.2}>
-            <Masthead>
-              <LogoWrapper>
-                <DHFTitle>Digital Harbor Foundation</DHFTitle>
-              </LogoWrapper>
+          <ParallaxLayer factor={1} offset={0} speed={0.2}>
+      */}
+        <Masthead>
+          <LogoWrapper>
+            <DHFTitle>Digital Harbor Foundation</DHFTitle>
+          </LogoWrapper>
 
-              <CTAContainer>
-                <ProjectTitle>Interactive Project Gallery</ProjectTitle>
-                <ButtonContainer>
-                  <GhostButton
-                    onClick={this.selectCourse.bind(this, "VectorFab")}
-                    onMouseOver={this.mouseOver}
-                    onMouseOut={this.mouseOut}
-                  >
-                    VectorFab
-                  </GhostButton>
-                  <GhostButton
-                    onClick={this.selectCourse.bind(this, "Game Workshop")}
-                    onMouseOver={this.mouseOver}
-                    onMouseOut={this.mouseOut}
-                  >
-                    Game Workshop
-                  </GhostButton>
-                </ButtonContainer>
-                {/*
+          <CTAContainer>
+            <ProjectTitle>Interactive Project Gallery</ProjectTitle>
+            <ButtonContainer>
+              <GhostButton
+                onClick={this.selectCourse.bind(this, "VectorFab")}
+                onMouseOver={this.mouseOver}
+                onMouseOut={this.mouseOut}
+              >
+                VectorFab
+              </GhostButton>
+              <GhostButton
+                onClick={this.selectCourse.bind(this, "Game Workshop")}
+                onMouseOver={this.mouseOver}
+                onMouseOut={this.mouseOut}
+              >
+                Game Workshop
+              </GhostButton>
+            </ButtonContainer>
+            {/*
                 {this.state.hovering && (
                   <CourseDescriptionContainer>
                     <CourseDescription>
@@ -76,29 +78,38 @@ class App extends Component {
                   </CourseDescriptionContainer>
                 )}
                 */}
-              </CTAContainer>
-            </Masthead>
+          </CTAContainer>
+        </Masthead>
+        {/* 
+                      </ParallaxLayer>
+            */}
+
+        <Toggle>
+          {({ on, toggle }) => (
+            <React.Fragment>
+              <ProjectModal
+                on={on}
+                toggle={toggle}
+                entries={this.state.entries}
+                selectedCourse={this.state.selectedCourse}
+              />
+            </React.Fragment>
+          )}
+        </Toggle>
+        {/*
+          <ParallaxLayer factor={1} offset={1} speed={0.2}>
+            >
+            */}
+
+        <ProjectCardGrid
+          entries={this.state.entries}
+          selectedCourse={this.state.selectedCourse}
+        />
+        <Footer />
+        {/*
           </ParallaxLayer>
-          <Toggle>
-            {({ on, toggle }) => (
-              <React.Fragment>
-                <ProjectModal
-                  on={on}
-                  toggle={toggle}
-                  entries={this.state.entries}
-                  selectedCourse={this.state.selectedCourse}
-                />
-              </React.Fragment>
-            )}
-          </Toggle>
-          <ParallaxLayer offset={1} speed={0.2}>
-            <ProjectCardGrid
-              entries={this.state.entries}
-              selectedCourse={this.state.selectedCourse}
-            />
-            <Footer />
-          </ParallaxLayer>
-        </Parallax>
+        </Parallax>            
+            */}
       </AppWrapper>
     );
   }
