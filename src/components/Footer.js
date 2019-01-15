@@ -4,13 +4,15 @@ import styled from "styled-components";
 const Footer = () => (
   <FooterWrapper>
     <FooterTagline>
-      <FooterLink
-        href="https://digitalharbor.org"
-        target="_blank"
-        rel="nofollow"
-      >
-        Digital Harbor Foundation
-      </FooterLink>{" "}
+      <FooterLinkContainer>
+        <FooterLink
+          href="https://digitalharbor.org"
+          target="_blank"
+          rel="nofollow"
+        >
+          Digital Harbor Foundation
+        </FooterLink>{" "}
+      </FooterLinkContainer>
       <span role="img" aria-label="Unicorn">
         🦄
       </span>{" "}
@@ -36,10 +38,20 @@ const FooterLink = styled.a`
   color: #0091c9;
   text-decoration: none;
   transition: all ease-in-out 0.3s;
-
   &:hover {
     color: #fafafa;
+    opacity: 0.75;
     cursor: pointer;
+  }
+`;
+
+const FooterLinkContainer = styled.div`
+  display: inline;
+  transition: all ease-in 0.3s;
+  padding: 0%;
+  border-bottom: 2px solid rgba(0, 145, 201, 0.5);
+  &:hover {
+    background: rgba(0, 145, 201, 0.5);
   }
 `;
 
