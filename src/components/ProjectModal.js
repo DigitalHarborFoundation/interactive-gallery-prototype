@@ -34,7 +34,7 @@ class ProjectModal extends Component {
                   }}
                 >
                   <CloseButton onClick={toggle}>
-                    <Icon color="#2d2a2a" type="close" />
+                    <Icon color="#E96544" type="close" />
                   </CloseButton>
                   <ModalImageContainer>
                     {this.props.imgSource === "" ||
@@ -142,6 +142,9 @@ const ModalCard = styled(animated.div)`
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   z-index: 10;
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 const ModalImageContainer = styled.div`
