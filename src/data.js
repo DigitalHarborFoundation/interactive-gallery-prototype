@@ -78,5 +78,75 @@ export const entries = [
     makerStatement:
       "I wanted to try to make some kind of Mario maze. This maze is for entertainment. I would like to keep making iterations on it. ",
     imgSource: "/images/tester-typewriter-card.jpg"
+  },
+  {
+    id: 9,
+    youthName: "Elsa",
+    projectSemester: "Fall 2018",
+    enrolledCourse: "Game Workshop",
+    projectTitle: "Final Project",
+    makerStatement:
+      "Link to My Game: https://editor.p5js.org/mesacool/full/Bk71kIWz4",
+    imgSource: "/images/tester-typewriter-card.jpg"
+  },
+  {
+    id: 10,
+    youthName: "James",
+    projectSemester: "Fall 2018",
+    enrolledCourse: "Game Workshop",
+    projectTitle: "Spectacular Attack",
+    makerStatement:
+      "Link to My Game: https://editor.p5js.org/therealjames/sketches/SkagGa9WE",
+    imgSource: "/images/tester-typewriter-card.jpg"
+  },
+  {
+    id: 11,
+    youthName: "Jeshua",
+    projectSemester: "Fall 2018",
+    enrolledCourse: "Game Workshop",
+    projectTitle: "Jeshua's Final Project",
+    makerStatement:
+      "Link to My Game: https://editor.p5js.org/jstarghillshaka@youth.dhftc.org/full/HJOOejrxV",
+    imgSource: "/images/tester-typewriter-card.jpg"
+  },
+  {
+    id: 12,
+    youthName: "Jade",
+    projectSemester: "Fall 2018",
+    enrolledCourse: "Game Workshop",
+    projectTitle: "Jade's Final Project",
+    makerStatement:
+      "Link to My Game: https://editor.p5js.org/jadealexis_/full/ByL4xncWV",
+    imgSource: "/images/tester-typewriter-card.jpg"
+  },
+  {
+    id: 13,
+    youthName: "Coral",
+    projectSemester: "Fall 2018",
+    enrolledCourse: "Game Workshop",
+    projectTitle: "Coral's Final Project",
+    makerStatement:
+      "Link to My Game: https://editor.p5js.org/nerdygirl/full/rkgDB9MZzE",
+    imgSource: "/images/tester-typewriter-card.jpg"
+  },
+  {
+    id: 14,
+    youthName: "Sakari",
+    projectSemester: "Fall 2018",
+    enrolledCourse: "Game Workshop",
+    projectTitle: "Demoscene - Pajama Man",
+    makerStatement:
+      "Link to My Game: https://editor.p5js.org/masterbuilder/sketches/B1ok-e9C7",
+    imgSource: "/images/tester-typewriter-card.jpg"
+  },
+  {
+    id: 15,
+    youthName: "Morgan",
+    projectSemester: "Fall 2018",
+    enrolledCourse: "Game Workshop",
+    projectTitle: "Pong Pong Snake",
+    makerStatement:
+      "Link to My Game: https://editor.p5js.org/beepbeepimmasheep2/sketches/B1PEW0B1N",
+    imgSource: "/images/tester-typewriter-card.jpg"
   }
 ];
