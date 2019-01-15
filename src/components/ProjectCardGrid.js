@@ -34,6 +34,7 @@ class ProjectCardGrid extends Component {
                   youthName={entry.youthName}
                   projectTitle={entry.projectTitle}
                   projectSemester={entry.projectSemester}
+                  projectLink={entry.projectLink}
                   makerStatement={entry.makerStatement}
                 />
               ))}
@@ -51,7 +52,8 @@ ProjectCardGrid.propTypes = {
   selectedCourse: PropTypes.string.isRequired,
   enrolledCourse: PropTypes.string.isRequired,
   youthName: PropTypes.string.isRequired,
-  projectSemester: PropTypes.string.isRequired
+  projectSemester: PropTypes.string.isRequired,
+  projectLink: PropTypes.string
 };
 
 ProjectCardGrid.defaultProps = {

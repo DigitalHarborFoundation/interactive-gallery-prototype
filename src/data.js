@@ -85,8 +85,8 @@ export const entries = [
     projectSemester: "Fall 2018",
     enrolledCourse: "Game Workshop",
     projectTitle: "Final Project",
-    makerStatement:
-      "Link to My Game: https://editor.p5js.org/mesacool/full/Bk71kIWz4",
+    projectLink: "https://editor.p5js.org/mesacool/full/Bk71kIWz4",
+    makerStatement: "",
     imgSource: "/images/elsa-finalproject.jpg"
   },
   {
@@ -95,8 +95,8 @@ export const entries = [
     projectSemester: "Fall 2018",
     enrolledCourse: "Game Workshop",
     projectTitle: "Spectacular Attack",
-    makerStatement:
-      "Link to My Game: https://editor.p5js.org/therealjames/sketches/SkagGa9WE",
+    projectLink: "https://editor.p5js.org/therealjames/sketches/SkagGa9WE",
+    makerStatement: "",
     imgSource: "/images/james-finalproject.jpg"
   },
   {
@@ -105,8 +105,9 @@ export const entries = [
     projectSemester: "Fall 2018",
     enrolledCourse: "Game Workshop",
     projectTitle: "Jeshua's Final Project",
-    makerStatement:
-      "Link to My Game: https://editor.p5js.org/jstarghillshaka@youth.dhftc.org/full/HJOOejrxV",
+    projectLink:
+      "https://editor.p5js.org/jstarghillshaka@youth.dhftc.org/full/HJOOejrxV",
+    makerStatement: "",
     imgSource: "/images/jeshua-finalproject-gw.jpg"
   },
   {
@@ -115,8 +116,8 @@ export const entries = [
     projectSemester: "Fall 2018",
     enrolledCourse: "Game Workshop",
     projectTitle: "Jade's Final Project",
-    makerStatement:
-      "Link to My Game: https://editor.p5js.org/jadealexis_/full/ByL4xncWV",
+    projectLink: "https://editor.p5js.org/jadealexis_/full/ByL4xncWV",
+    makerStatement: "",
     imgSource: "/images/jade-finalproject.jpg"
   },
   {
@@ -125,8 +126,8 @@ export const entries = [
     projectSemester: "Fall 2018",
     enrolledCourse: "Game Workshop",
     projectTitle: "Coral's Final Project",
-    makerStatement:
-      "Link to My Game: https://editor.p5js.org/nerdygirl/full/rkgDB9MZzE",
+    projectLink: "https://editor.p5js.org/nerdygirl/full/rkgDB9MZzE",
+    makerStatement: "",
     imgSource: "/images/coral-finalproject.jpg"
   },
   {
@@ -135,8 +136,8 @@ export const entries = [
     projectSemester: "Fall 2018",
     enrolledCourse: "Game Workshop",
     projectTitle: "Demoscene - Pajama Man",
-    makerStatement:
-      "Link to My Game: https://editor.p5js.org/masterbuilder/sketches/B1ok-e9C7",
+    projectLink: "https://editor.p5js.org/masterbuilder/sketches/B1ok-e9C7",
+    makerStatement: "",
     imgSource: "/images/sakari-finalproject.jpg"
   },
   {
@@ -145,8 +146,9 @@ export const entries = [
     projectSemester: "Fall 2018",
     enrolledCourse: "Game Workshop",
     projectTitle: "Pong Pong Snake",
-    makerStatement:
-      "Link to My Game: https://editor.p5js.org/beepbeepimmasheep2/sketches/B1PEW0B1N",
+    projectLink:
+      "https://editor.p5js.org/beepbeepimmasheep2/sketches/B1PEW0B1N",
+    makerStatement: "",
     imgSource: "/images/morgan-finalproject.jpg"
   },
   {
@@ -155,8 +157,8 @@ export const entries = [
     projectSemester: "Fall 2018",
     enrolledCourse: "Game Workshop",
     projectTitle: "Unpasteurized Honey",
-    makerStatement:
-      "Link to My Game: https://editor.p5js.org/im.threw/sketches/B1ePSVulV",
+    projectLink: "https://editor.p5js.org/im.threw/sketches/B1ePSVulV",
+    makerStatement: "",
     imgSource: "/images/aliyah-unpasteurizedhoney.jpg"
   }
 ];

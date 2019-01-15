@@ -18,6 +18,7 @@ class ProjectCard extends Component {
                 youthName={this.props.youthName}
                 projectTitle={this.props.projectTitle}
                 projectSemester={this.props.projectSemester}
+                projectLink={this.props.projectLink}
                 enrolledCourse={this.props.enrolledCourse}
                 imgSource={this.props.imgSource}
                 makerStatement={this.props.makerStatement}
@@ -53,7 +54,8 @@ class ProjectCard extends Component {
 ProjectCard.propTypes = {
   imgSource: PropTypes.string.isRequired,
   youthName: PropTypes.string.isRequired,
-  projectSemester: PropTypes.string.isRequired
+  projectSemester: PropTypes.string.isRequired,
+  projectLink: PropTypes.string
 };
 
 ProjectCard.defaultProps = {

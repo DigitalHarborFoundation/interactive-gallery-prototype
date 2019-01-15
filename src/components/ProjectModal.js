@@ -14,9 +14,12 @@ class ProjectModal extends Component {
         <Transition
           native
           items={on}
+          unique
+          reset
           from={{ opacity: 0, bgOpacity: 0, y: -80 }}
           enter={{ opacity: 1, bgOpacity: 0.85, y: 0 }}
           leave={{ opacity: 0, bgOpacity: 0, y: -80 }}
+          trail={400}
         >
           {on =>
             on &&
@@ -45,7 +48,7 @@ class ProjectModal extends Component {
                     ) : (
                       <ProjectImage
                         src={this.props.imgSource}
-                        alt={this.props.imgSource}
+                        alt={this.props.projectTitle}
                       />
                     )}
                   </ModalImageContainer>
@@ -91,7 +94,8 @@ ProjectModal.propTypes = {
   selectedCourse: PropTypes.string.isRequired,
   enrolledCourse: PropTypes.string.isRequired,
   youthName: PropTypes.string.isRequired,
-  projectSemester: PropTypes.string.isRequired
+  projectSemester: PropTypes.string.isRequired,
+  projectLink: PropTypes.string
 };
 
 ProjectModal.defaultProps = {
@@ -122,7 +126,8 @@ const ModalBackground = styled(animated.div)`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.85);
+  /* background: rgba(0, 0, 0, 0.85); */
+  background: #000000;
 `;
 
 const ModalCard = styled(animated.div)`
