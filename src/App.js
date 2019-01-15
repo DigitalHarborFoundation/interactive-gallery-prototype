@@ -119,6 +119,9 @@ export default App;
 
 const AppWrapper = styled.div`
   min-height: 100vh;
+  @media only screen and (max-width: 1000px) {
+    max-height: 100vh;
+  }
 `;
 
 const LogoWrapper = styled.div`
@@ -135,6 +138,11 @@ const DHFTitle = styled.h1`
   font-size: 4.8rem;
   font-weight: 300;
   color: #fafafa;
+  @media only screen and (max-width: 1000px) {
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+  }
 `;
 
 const Masthead = styled.div`
@@ -172,6 +180,11 @@ const ButtonContainer = styled.div`
   flex-direction: row;
   justify-items: center;
   align-items: center;
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const GhostButton = styled.button`
@@ -205,6 +218,22 @@ const GhostButton = styled.button`
 
   &:focus {
     outline: 0;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+
+    &:first-child {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 2.4rem;
+    }
+
+    &:last-child {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
   }
 `;
 
