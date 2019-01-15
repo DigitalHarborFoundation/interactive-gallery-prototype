@@ -165,6 +165,10 @@ const CTAContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 16vh;
+
+  @media only screen and (max-width: 1000px) {
+    text-align: center;
+  }
 `;
 
 const ProjectTitle = styled.h2`
@@ -172,6 +176,9 @@ const ProjectTitle = styled.h2`
   font-weight: normal;
   color: #fafafa;
   margin-bottom: 10vh;
+
+  @media only screen and (max-width: 1000px) {
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -188,7 +195,8 @@ const ButtonContainer = styled.div`
 `;
 
 const GhostButton = styled.button`
-  width: 24rem;
+  width: fit-content;
+  min-width: 24rem;
   border: 2px solid #fafafa;
   border-radius: 15px;
   background-color: rgba(196, 196, 196, 0);
@@ -232,7 +240,7 @@ const GhostButton = styled.button`
     &:last-child {
       margin-left: 0;
       margin-right: 0;
-      margin-bottom: 0;
+      margin-bottom: 2.4rem;
     }
   }
 `;
