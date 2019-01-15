@@ -87,7 +87,7 @@ export const entries = [
     projectTitle: "Final Project",
     makerStatement:
       "Link to My Game: https://editor.p5js.org/mesacool/full/Bk71kIWz4",
-    imgSource: "/images/tester-typewriter-card.jpg"
+    imgSource: "/images/elsa-finalproject.jpg"
   },
   {
     id: 10,
@@ -97,7 +97,7 @@ export const entries = [
     projectTitle: "Spectacular Attack",
     makerStatement:
       "Link to My Game: https://editor.p5js.org/therealjames/sketches/SkagGa9WE",
-    imgSource: "/images/tester-typewriter-card.jpg"
+    imgSource: "/images/james-finalproject.jpg"
   },
   {
     id: 11,
@@ -107,7 +107,7 @@ export const entries = [
     projectTitle: "Jeshua's Final Project",
     makerStatement:
       "Link to My Game: https://editor.p5js.org/jstarghillshaka@youth.dhftc.org/full/HJOOejrxV",
-    imgSource: "/images/tester-typewriter-card.jpg"
+    imgSource: "/images/jeshua-finalproject-gw.jpg"
   },
   {
     id: 12,
@@ -117,7 +117,7 @@ export const entries = [
     projectTitle: "Jade's Final Project",
     makerStatement:
       "Link to My Game: https://editor.p5js.org/jadealexis_/full/ByL4xncWV",
-    imgSource: "/images/tester-typewriter-card.jpg"
+    imgSource: "/images/jade-finalproject.jpg"
   },
   {
     id: 13,
@@ -127,7 +127,7 @@ export const entries = [
     projectTitle: "Coral's Final Project",
     makerStatement:
       "Link to My Game: https://editor.p5js.org/nerdygirl/full/rkgDB9MZzE",
-    imgSource: "/images/tester-typewriter-card.jpg"
+    imgSource: "/images/coral-finalproject.jpg"
   },
   {
     id: 14,
@@ -137,7 +137,7 @@ export const entries = [
     projectTitle: "Demoscene - Pajama Man",
     makerStatement:
       "Link to My Game: https://editor.p5js.org/masterbuilder/sketches/B1ok-e9C7",
-    imgSource: "/images/tester-typewriter-card.jpg"
+    imgSource: "/images/sakari-finalproject.jpg"
   },
   {
     id: 15,
@@ -147,7 +147,7 @@ export const entries = [
     projectTitle: "Pong Pong Snake",
     makerStatement:
       "Link to My Game: https://editor.p5js.org/beepbeepimmasheep2/sketches/B1PEW0B1N",
-    imgSource: "/images/tester-typewriter-card.jpg"
+    imgSource: "/images/morgan-finalproject.jpg"
   },
   {
     id: 16,
@@ -157,6 +157,6 @@ export const entries = [
     projectTitle: "Unpasteurized Honey",
     makerStatement:
       "Link to My Game: https://editor.p5js.org/im.threw/sketches/B1ePSVulV",
-    imgSource: "/images/tester-typewriter-card.jpg"
+    imgSource: "/images/aliyah-unpasteurizedhoney.jpg"
   }
 ];
