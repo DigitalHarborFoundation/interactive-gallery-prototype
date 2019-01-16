@@ -52,6 +52,7 @@ const FooterLinkContainer = styled.div`
   border-bottom: 2px solid rgba(0, 145, 201, 0.5);
   &:hover {
     background: rgba(0, 145, 201, 0.5);
+    border-bottom: none;
   }
 `;
 

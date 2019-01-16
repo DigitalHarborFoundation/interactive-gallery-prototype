@@ -86,7 +86,8 @@ export const entries = [
     enrolledCourse: "Game Workshop",
     projectTitle: "Final Project",
     projectLink: "https://editor.p5js.org/mesacool/full/Bk71kIWz4",
-    makerStatement: "",
+    makerStatement:
+      "Blue mountain single origin carajillo, barista, single shot french press viennese fair trade con panna. That, eu kopi-luwak robusta, mug trifecta espresso a black wings. ",
     imgSource: "/images/elsa-finalproject.jpg"
   },
   {

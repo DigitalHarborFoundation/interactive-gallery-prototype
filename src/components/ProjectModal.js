@@ -69,6 +69,14 @@ class ProjectModal extends Component {
                       </YouthInfoContainer>
                     </ProjectMetaContainer>
                     <MakerStatement>{this.props.makerStatement}</MakerStatement>
+                    {this.props.projectLink && (
+                      <React.Fragment>
+                        <YouthInfoItem>Link to my project:</YouthInfoItem>{" "}
+                        <ProjectLink href={this.props.projectLink}>
+                          {this.props.projectTitle}
+                        </ProjectLink>
+                      </React.Fragment>
+                    )}
                   </ProjectInfoContainer>
                 </ModalCard>
                 <ModalBackground
@@ -209,6 +217,12 @@ const MakerStatement = styled.p`
   line-height: 2.4rem;
   margin: 0 auto;
   padding: 4rem 4rem;
+`;
+
+const ProjectLink = styled.a`
+  color: #0091c9;
+  font-size: 2rem;
+  line-height: 2.4rem;
 `;
 
 const CloseButton = styled.button`
