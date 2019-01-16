@@ -19,7 +19,7 @@ class ProjectModal extends Component {
           from={{ opacity: 0, bgOpacity: 0, y: -80 }}
           enter={{ opacity: 1, bgOpacity: 0.85, y: 0 }}
           leave={{ opacity: 0, bgOpacity: 0, y: -80 }}
-          trail={400}
+          trail={500}
         >
           {on =>
             on &&
@@ -36,6 +36,7 @@ class ProjectModal extends Component {
                   <CloseButton onClick={toggle}>
                     <Icon color="#E96544" type="close" />
                   </CloseButton>
+
                   <ModalImageContainer>
                     {this.props.imgSource === "" ||
                     this.props.imgSource === " " ||
@@ -144,7 +145,7 @@ const ModalCard = styled(animated.div)`
   justify-content: center;
   align-items: center;
   width: 80%;
-  height: auto;
+  /* height: auto; */
   position: relative;
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
@@ -158,20 +159,18 @@ const ModalCard = styled(animated.div)`
 const ModalImageContainer = styled.div`
   width: 100%;
   height: 100%;
-  margin: auto;
   background: red;
   padding-top: 0;
   padding-bottom: 0;
-  padding-left: 0;
   border-radius: 10px;
 `;
 
 const ProjectImage = styled.img`
   width: 100%;
   height: auto;
-  display: block;
-  min-width: 100%;
   min-height: 100%;
+  display: block;
+  object-fit: fill;
   border-radius: 10px;
   box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
 `;
