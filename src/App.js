@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Parallax, ParallaxLayer } from "react-spring/addons";
+import { config } from "react-spring";
 import Footer from "./components/Footer";
 import ProjectCardGrid from "./components/ProjectCardGrid";
 import ProjectModal from "./components/ProjectModal";
@@ -22,7 +23,7 @@ class App extends Component {
     let filteredEntries = entries.filter(
       entry => entry.enrolledCourse.toLowerCase() === courseName.toLowerCase()
     );
-    // this.parallax.scrollTo(1);
+    this.refs.cardGrid.scrollIntoView();
     this.setState({
       selectedCourse: `${courseName.toLowerCase()}`,
       entries: filteredEntries
@@ -32,15 +33,6 @@ class App extends Component {
   render() {
     return (
       <AppWrapper>
-        {/*
-        <Parallax
-          pages={2}
-          scrolling={true}
-          vertical
-          ref={ref => (this.parallax = ref)}
-        >
-          <ParallaxLayer factor={1} offset={0} speed={0.2}>
-      */}
         <Masthead>
           <LogoWrapper>
             <DHFTitle>Digital Harbor Foundation</DHFTitle>
@@ -64,26 +56,8 @@ class App extends Component {
                 Game Workshop
               </GhostButton>
             </ButtonContainer>
-            {/*
-                {this.state.hovering && (
-                  <CourseDescriptionContainer>
-                    <CourseDescription>
-                      Lasers! Vectors! Computers and plotters! Explore the
-                      exciting possibilities of fabrication with vector
-                      graphics! In this course you will learn the basics of
-                      vector design with the intention of fabrication. You’ll
-                      practice designing for multiple fabrication tools and
-                      equipment, such as laser cutters and plotter devices.
-                    </CourseDescription>
-                  </CourseDescriptionContainer>
-                )}
-                */}
           </CTAContainer>
         </Masthead>
-        {/* 
-                      </ParallaxLayer>
-            */}
-
         <Toggle>
           {({ on, toggle }) => (
             <React.Fragment>
@@ -96,20 +70,13 @@ class App extends Component {
             </React.Fragment>
           )}
         </Toggle>
-        {/*
-          <ParallaxLayer factor={1} offset={1} speed={0.2}>
-            >
-            */}
-
-        <ProjectCardGrid
-          entries={this.state.entries}
-          selectedCourse={this.state.selectedCourse}
-        />
+        <div ref="cardGrid">
+          <ProjectCardGrid
+            entries={this.state.entries}
+            selectedCourse={this.state.selectedCourse}
+          />
+        </div>
         <Footer />
-        {/*
-          </ParallaxLayer>
-        </Parallax>            
-            */}
       </AppWrapper>
     );
   }
@@ -149,7 +116,7 @@ const Masthead = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 80vh;
+  min-height: 100vh;
   min-width: 100vw;
   width: 100%;
   height: 100%;
