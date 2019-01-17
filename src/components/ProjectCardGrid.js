@@ -12,6 +12,7 @@ class ProjectCardGrid extends Component {
     return (
       <ContentWrapper>
         <Spring
+          native
           config={{ tension: 280, friction: 60 }}
           from={{
             opacity: 0,

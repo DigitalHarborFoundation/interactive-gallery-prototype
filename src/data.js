@@ -87,7 +87,7 @@ export const entries = [
     projectTitle: "Final Project",
     projectLink: "https://editor.p5js.org/mesacool/full/Bk71kIWz4",
     makerStatement:
-      "Blue mountain single origin carajillo, barista, single shot french press viennese fair trade con panna. That, eu kopi-luwak robusta, mug trifecta espresso a black wings. ",
+      "For my final project, I made a choose your own adventure game about rescuing your cousins from aliens. It’s just so funny. Sometimes things wouldn’t work, so I had to find another way to do them.",
     imgSource: "/images/elsa-finalproject.jpg"
   },
   {
@@ -97,7 +97,8 @@ export const entries = [
     enrolledCourse: "Game Workshop",
     projectTitle: "Spectacular Attack",
     projectLink: "https://editor.p5js.org/therealjames/sketches/SkagGa9WE",
-    makerStatement: "",
+    makerStatement:
+      "I made a platformer for my final project. I challenged myself to have a character that moves. The movement ended up being the most successful part.",
     imgSource: "/images/james-finalproject.jpg"
   },
   {
@@ -108,7 +109,8 @@ export const entries = [
     projectTitle: "Jeshua's Final Project",
     projectLink:
       "https://editor.p5js.org/jstarghillshaka@youth.dhftc.org/full/HJOOejrxV",
-    makerStatement: "",
+    makerStatement:
+      "The game I made is a side scroller where you have to dodge obstacles to reach the goal. There are also blocks that can either speed up or slow down your character. I took inspirations from the game flappy bird. It is also a side scroller with similar gaming aspects to mine. I think the most successful thing about my project is the sprites I made, and I want to make a longer version with more power-ups and character selection.",
     imgSource: "/images/jeshua-finalproject-gw.jpg"
   },
   {
@@ -118,7 +120,8 @@ export const entries = [
     enrolledCourse: "Game Workshop",
     projectTitle: "Jade's Final Project",
     projectLink: "https://editor.p5js.org/jadealexis_/full/ByL4xncWV",
-    makerStatement: "",
+    makerStatement:
+      "I made a platform game inspired by Super Mario Bros. The art was the most successful part of my project, and the biggest challenge was getting my character to move.",
     imgSource: "/images/jade-finalproject.jpg"
   },
   {
@@ -128,7 +131,8 @@ export const entries = [
     enrolledCourse: "Game Workshop",
     projectTitle: "Coral's Final Project",
     projectLink: "https://editor.p5js.org/nerdygirl/full/rkgDB9MZzE",
-    makerStatement: "",
+    makerStatement:
+      "I made a drawing game using p5js. I think the color/variety selection was the most successful part of my design.",
     imgSource: "/images/coral-finalproject.jpg"
   },
   {
@@ -149,7 +153,8 @@ export const entries = [
     projectTitle: "Pong Pong Snake",
     projectLink:
       "https://editor.p5js.org/beepbeepimmasheep2/sketches/B1PEW0B1N",
-    makerStatement: "",
+    makerStatement:
+      "Well my game is about a character. As the character you are trying to dodge all the obstacles without dying. I got this idea from slither.io and i got inspired to make a game related to it.",
     imgSource: "/images/morgan-finalproject.jpg"
   },
   {

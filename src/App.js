@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Parallax, ParallaxLayer } from "react-spring/addons";
-import { config } from "react-spring";
+import { Transition, config } from "react-spring";
 import Footer from "./components/Footer";
 import ProjectCardGrid from "./components/ProjectCardGrid";
 import ProjectModal from "./components/ProjectModal";
@@ -71,10 +70,20 @@ class App extends Component {
           )}
         </Toggle>
         <div ref="cardGrid">
-          <ProjectCardGrid
-            entries={this.state.entries}
-            selectedCourse={this.state.selectedCourse}
-          />
+          <Transition
+            native
+            items={this.state.entries}
+            from={{ opacity: 0, bgOpacity: 0, height: -80 }}
+            enter={{ opacity: 1, bgOpacity: 0.85, y: 0 }}
+            leave={{ opacity: 0, bgOpacity: 0, y: 80 }}
+          >
+            {item => props => (
+              <ProjectCardGrid
+                entries={this.state.entries}
+                selectedCourse={this.state.selectedCourse}
+              />
+            )}
+          </Transition>
         </div>
         <Footer />
       </AppWrapper>
