@@ -85,7 +85,9 @@ class ProjectModal extends Component {
                     opacity: styles.bgOpacity.interpolate(
                       bgOpacity => bgOpacity
                     ),
-                    delay: 800
+                    trail: 1000,
+                    unique: true,
+                    reset: true
                   }}
                   onClick={toggle}
                 />
@@ -136,7 +138,7 @@ const ModalBackground = styled(animated.div)`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.85);
+  /* background: rgba(0, 0, 0, 0.85); */
   background: #000000;
 `;
 
