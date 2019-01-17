@@ -27,7 +27,7 @@ class App extends Component {
     );
     this.setState({
       initialLoad: false,
-      selectedCourse: `${courseName.toLowerCase()}`,
+      selectedCourse: `${courseName}`,
       entries: filteredEntries
     });
   };
