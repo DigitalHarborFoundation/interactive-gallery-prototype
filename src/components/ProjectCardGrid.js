@@ -11,9 +11,11 @@ class ProjectCardGrid extends Component {
   render() {
     return (
       <ContentWrapper>
-        <NowBrowsingHeader>
-          Now Browsing: {this.props.selectedCourse}
-        </NowBrowsingHeader>
+        {this.props.initialLoad === false && (
+          <NowBrowsingHeader>
+            Now Browsing: {this.props.selectedCourse}
+          </NowBrowsingHeader>
+        )}
         <Spring
           native
           config={{ tension: 280, friction: 60 }}

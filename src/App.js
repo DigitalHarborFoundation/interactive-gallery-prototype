@@ -122,6 +122,7 @@ class App extends Component {
             <ProjectCardGrid
               entries={this.state.entries}
               selectedCourse={this.state.selectedCourse}
+              initialLoad={this.state.initialLoad}
             />
           )}
         </Transition>
@@ -261,6 +262,7 @@ const GhostButton = styled.button`
   border-radius: 15px;
   background-color: rgba(196, 196, 196, 0);
   color: #fafafa;
+  color: ${props => (props.activeCourse ? "#E96544" : "#fafafa")};
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 400;
