@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import csCoreImg from "./mb-cscore-img.jpg";
 import fabCoreImg from "./mb-fabcore-img.jpg";
+import indStudyImg from "./mb-indstudy-img.jpg";
 
 const MemberCourses = () => (
   <ContentWrapper>
@@ -65,7 +66,7 @@ const MemberCourses = () => (
       </CardWrapper>
       <CardWrapper>
         <ProjectImageContainer>
-          <ProjectImage src={csCoreImg} />
+          <ProjectImage src={indStudyImg} />
         </ProjectImageContainer>
         <CourseTitle>Independent Study</CourseTitle>
         <CourseDescription>

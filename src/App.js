@@ -42,9 +42,18 @@ class App extends Component {
 
           <CTAContainer>
             <ProjectTitle>Interactive Project Gallery</ProjectTitle>
-            <ProjectSubTitle>
-              Click on a course to load projects
-            </ProjectSubTitle>
+            <Spring
+              config={{ tension: 200, friction: 20, delay: 200 }}
+              from={{ opacity: 0 }}
+              to={{ opacity: 1 }}
+              reset={this.state.initialLoad}
+            >
+              {props => (
+                <ProjectSubTitle style={props}>
+                  Click on a course to load youth projects
+                </ProjectSubTitle>
+              )}
+            </Spring>
             <ButtonContainer>
               <GhostButton
                 onClick={this.selectCourse.bind(this, "VectorFab")}
