@@ -224,7 +224,7 @@ const ButtonContainer = styled.div`
 `;
 
 const EnrollButton = styled.button`
-  width: fit-content;
+  width: 100%;
   min-width: 24rem;
   border: 2px solid #fafafa;
   border-radius: 15px;

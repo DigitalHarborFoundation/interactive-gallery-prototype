@@ -32,12 +32,11 @@ const FooterWrapper = styled.div`
 `;
 
 const FooterLink = styled.a`
-  color: #fafafa;
+  color: #0091c9;
   text-decoration: none;
   transition: all ease-in-out 0.3s;
   &:hover {
-    color: #e96544;
-    opacity: 0.75;
+    color: #fafafa;
     cursor: pointer;
   }
 `;
@@ -56,9 +55,9 @@ const FooterLinkContainer = styled.div`
   transition: all ease-in 0.3s;
   padding: 0%;
   /* border-bottom: 2px solid rgba(0, 145, 201, 0.5); */
-  border-bottom: 1px dotted #fafafa;
+  border-bottom: 1px dotted #0091c9;
   &:hover {
-    border-bottom: 1px dotted #e96544;
+    border-bottom: 1px dotted #fafafa;
   }
 `;
 

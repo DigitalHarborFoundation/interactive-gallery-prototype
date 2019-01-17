@@ -50,4 +50,10 @@ const LinkContainer = styled.div`
   a {
     padding: 1rem;
   }
+
+  path:hover {
+    fill: #fafafa;
+    transition: all 0.3s ease-in-out;
+    pointer-events: all;
+  }
 `;
