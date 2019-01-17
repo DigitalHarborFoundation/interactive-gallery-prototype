@@ -48,18 +48,17 @@ const MemberCourses = () => (
         </ProjectImageContainer>
         <CourseTitle>Fab Core</CourseTitle>
         <CourseDescription>
-          CS Core is an introduction to the fundamentals of programming. This
-          course is focused on building a solid foundation through projects and
-          examples of best practices.
+          Fab Core is an introduction to digital fabrication methods and design
+          for fabrication. This course is focused on precision 3D design and
+          printing including hands-on experience with 3D printers.
           <br />
           <br />
-          Youth will learn programming skills through modern JavaScript and the
-          p5.js library. There is a focus on creating interactive web
-          experiences and core skills that will lead into future computer
-          science courses.
+          In addition, there will be a focus on 2D design for fabrication using
+          Inkscape and hands-on experience with vinyl cutters for paper and
+          decal design.
           <br />
           <br />
-          This course is the first in our Computer Science Pathway and is a
+          This course is the first in our Fabrication Pathway and is a
           prerequisite to following courses.
         </CourseDescription>
         <GhostButtonLink
