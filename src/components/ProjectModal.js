@@ -71,12 +71,12 @@ class ProjectModal extends Component {
                     </ProjectMetaContainer>
                     <MakerStatement>{this.props.makerStatement}</MakerStatement>
                     {this.props.projectLink && (
-                      <React.Fragment>
-                        <YouthInfoItem>Link to my project:</YouthInfoItem>{" "}
+                      <ProjectLinkContainer>
+                        <ProjectLinkInfo>Link to my project:</ProjectLinkInfo>{" "}
                         <ProjectLink href={this.props.projectLink}>
                           {this.props.projectTitle}
                         </ProjectLink>
-                      </React.Fragment>
+                      </ProjectLinkContainer>
                     )}
                   </ProjectInfoContainer>
                 </ModalCard>
@@ -218,10 +218,28 @@ const MakerStatement = styled.p`
   padding: 4rem 4rem;
 `;
 
+const ProjectLinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ProjectLinkInfo = styled.p`
+  color: #5c5f5f;
+  font-size: 2rem;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 2rem;
+  padding-right: 1rem;
+`;
+
 const ProjectLink = styled.a`
   color: #0091c9;
   font-size: 2rem;
   line-height: 2.4rem;
+  margin-top: 0 auto;
+  padding-bottom: 2rem;
 `;
 
 const CloseButton = styled.button`
