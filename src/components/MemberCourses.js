@@ -31,7 +31,7 @@ const MemberCourses = () => (
         <GhostButtonLink
           href="https://www.digitalharbor.org/event/cs-core-mondays-wednesdays-members/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
         >
           Enroll Now
         </GhostButtonLink>
@@ -59,7 +59,7 @@ const MemberCourses = () => (
         <GhostButtonLink
           href="https://www.digitalharbor.org/event/fab-core-tuesdays-thursdays-members/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
         >
           Enroll Now
         </GhostButtonLink>
@@ -86,7 +86,7 @@ const MemberCourses = () => (
         <GhostButtonLink
           href="https://www.digitalharbor.org/event/cs-core-mondays-wednesdays-members/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
         >
           Enroll Now
         </GhostButtonLink>

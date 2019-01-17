@@ -18,8 +18,11 @@ class App extends Component {
     initialLoad: true
   };
 
-  mouseOver = () => this.setState({ hovering: true });
-  mouseOut = () => this.setState({ hovering: false });
+  enrollCourse = () => {
+    this.setState({
+      initialLoad: true
+    });
+  };
 
   selectCourse = courseName => {
     let filteredEntries = entries.filter(
@@ -42,11 +45,13 @@ class App extends Component {
 
           <CTAContainer>
             <ProjectTitle>Interactive Project Gallery</ProjectTitle>
+            <EnrollButton onClick={this.enrollCourse.bind(this)}>
+              Enroll in Youth Courses
+            </EnrollButton>
             <Spring
               config={{ tension: 200, friction: 20, delay: 200 }}
               from={{ opacity: 0 }}
               to={{ opacity: 1 }}
-              reset={this.state.initialLoad}
             >
               {props => (
                 <ProjectSubTitle style={props}>
@@ -55,20 +60,34 @@ class App extends Component {
               )}
             </Spring>
             <ButtonContainer>
-              <GhostButton
-                onClick={this.selectCourse.bind(this, "VectorFab")}
-                onMouseOver={this.mouseOver}
-                onMouseOut={this.mouseOut}
+              <Spring
+                config={{ tension: 200, friction: 20, delay: 300 }}
+                from={{ opacity: 0 }}
+                to={{ opacity: 1 }}
               >
-                VectorFab
-              </GhostButton>
-              <GhostButton
-                onClick={this.selectCourse.bind(this, "Game Workshop")}
-                onMouseOver={this.mouseOver}
-                onMouseOut={this.mouseOut}
+                {props => (
+                  <GhostButton
+                    onClick={this.selectCourse.bind(this, "VectorFab")}
+                    style={{ ...props }}
+                  >
+                    VectorFab
+                  </GhostButton>
+                )}
+              </Spring>
+              <Spring
+                config={{ tension: 200, friction: 20, delay: 400 }}
+                from={{ opacity: 0 }}
+                to={{ opacity: 1 }}
               >
-                Game Workshop
-              </GhostButton>
+                {props => (
+                  <GhostButton
+                    onClick={this.selectCourse.bind(this, "Game Workshop")}
+                    style={{ ...props }}
+                  >
+                    Game Workshop
+                  </GhostButton>
+                )}
+              </Spring>
             </ButtonContainer>
           </CTAContainer>
         </Masthead>
@@ -175,7 +194,7 @@ const ProjectTitle = styled.h2`
   font-weight: normal;
   color: #fafafa;
   /* margin-bottom: 10vh; */
-  margin-bottom: 5vh;
+  margin-bottom: 8vh;
 
   @media only screen and (max-width: 1000px) {
   }
@@ -184,6 +203,7 @@ const ProjectTitle = styled.h2`
 const ProjectSubTitle = styled.h3`
   font-size: 3rem;
   font-weight: normal;
+  margin-top: 5vh;
   margin-bottom: 5vh;
   color: #fafafa;
   @media only screen and (max-width: 1000px) {
@@ -200,6 +220,37 @@ const ButtonContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+`;
+
+const EnrollButton = styled.button`
+  width: fit-content;
+  min-width: 24rem;
+  border: 2px solid #fafafa;
+  border-radius: 15px;
+  background-color: rgba(196, 196, 196, 0);
+  color: #fafafa;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  padding: 1.6rem 2.4rem;
+  text-align: center;
+  transition: all ease 0.5s;
+
+  &:hover {
+    border: 2px solid #0091c9;
+    color: #0091c9;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    width: 80%;
   }
 `;
 
