@@ -105,13 +105,17 @@ export default MemberCourses;
 
 const ContentWrapper = styled.div`
   width: 80%;
-  margin: 10vh auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+  margin-bottom: 0;
 `;
 
 const SectionTitle = styled.h2`
   color: #000;
   font-size: 4rem;
   margin-bottom: 0;
+  margin-top: 0;
   padding-bottom: 0;
 `;
 

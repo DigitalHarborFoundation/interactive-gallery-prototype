@@ -195,7 +195,7 @@ const ProjectTitle = styled.h2`
   font-weight: normal;
   color: #fafafa;
   /* margin-bottom: 10vh; */
-  margin-bottom: 8vh;
+  margin-bottom: 6vh;
 
   @media only screen and (max-width: 1000px) {
   }
