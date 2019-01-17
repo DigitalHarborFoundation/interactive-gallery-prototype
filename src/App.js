@@ -22,7 +22,6 @@ class App extends Component {
     let filteredEntries = entries.filter(
       entry => entry.enrolledCourse.toLowerCase() === courseName.toLowerCase()
     );
-    this.refs.cardGrid.scrollIntoView();
     this.setState({
       selectedCourse: `${courseName.toLowerCase()}`,
       entries: filteredEntries
@@ -69,22 +68,22 @@ class App extends Component {
             </React.Fragment>
           )}
         </Toggle>
-        <div ref="cardGrid">
-          <Transition
-            native
-            items={this.state.entries}
-            from={{ opacity: 0, bgOpacity: 0, height: -80 }}
-            enter={{ opacity: 1, bgOpacity: 0.85, y: 0 }}
-            leave={{ opacity: 0, bgOpacity: 0, y: 80 }}
-          >
-            {item => props => (
-              <ProjectCardGrid
-                entries={this.state.entries}
-                selectedCourse={this.state.selectedCourse}
-              />
-            )}
-          </Transition>
-        </div>
+
+        <Transition
+          native
+          items={this.state.entry}
+          from={{ opacity: 0, bgOpacity: 0, height: -80 }}
+          enter={{ opacity: 1, bgOpacity: 0.85, y: 0 }}
+          leave={{ opacity: 0, bgOpacity: 0, y: 80 }}
+        >
+          {item => props => (
+            <ProjectCardGrid
+              entries={this.state.entries}
+              selectedCourse={this.state.selectedCourse}
+            />
+          )}
+        </Transition>
+
         <Footer />
       </AppWrapper>
     );
