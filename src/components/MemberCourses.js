@@ -27,6 +27,13 @@ const MemberCourses = () => (
           This course is the first in our Computer Science Pathway and is a
           prerequisite to following courses.
         </CourseDescription>
+        <GhostButtonLink
+          href="https://www.digitalharbor.org/event/cs-core-mondays-wednesdays-members/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Enroll Now
+        </GhostButtonLink>
       </CardWrapper>
       <CardWrapper>
         <ProjectImageContainer>
@@ -48,6 +55,40 @@ const MemberCourses = () => (
           This course is the first in our Computer Science Pathway and is a
           prerequisite to following courses.
         </CourseDescription>
+        <GhostButtonLink
+          href="https://www.digitalharbor.org/event/fab-core-tuesdays-thursdays-members/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Enroll Now
+        </GhostButtonLink>
+      </CardWrapper>
+      <CardWrapper>
+        <ProjectImageContainer>
+          <ProjectImage src={csCoreImg} />
+        </ProjectImageContainer>
+        <CourseTitle>Independent Study</CourseTitle>
+        <CourseDescription>
+          Independent Study is an opportunity for High School Members who wish
+          to work on a project that furthers their knowledge in a particular
+          skill area or helps them develop skills outside of those offered in
+          current DHF courses.
+          <br />
+          <br />
+          This is also a great way for Members who have a schedule that doesn’t
+          easily fit with the schedule of courses we typically offer to still be
+          involved at DHF. It is not paid work.
+          <br />
+          <br />
+          <strong>This course is ONLY open to High School aged Members.</strong>
+        </CourseDescription>
+        <GhostButtonLink
+          href="https://www.digitalharbor.org/event/cs-core-mondays-wednesdays-members/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Enroll Now
+        </GhostButtonLink>
       </CardWrapper>
     </MainGrid>
   </ContentWrapper>
@@ -71,7 +112,7 @@ const MainGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 4vw;
-  grid-row-gap: 2vh
+  grid-row-gap: 4vh;
   margin-top: 5rem;
   @media only screen and (max-width: 1000px) {
     grid-template-columns: 1fr;
@@ -87,11 +128,11 @@ const CardWrapper = styled.div`
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
 
-  :hover {
-    box-shadow: rgba(39, 44, 49, 0.07) 8px 28px 50px,
-      rgba(39, 44, 49, 0.04) 1px 6px 12px;
-    transform: translate3D(0, -1px, 0) scale(1.04);
-    cursor: pointer;
+  @media only screen and (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -128,27 +169,25 @@ const CourseDescription = styled.p`
   padding: 2rem;
 `;
 
-const GhostButton = styled.button`
-  width: fit-content;
+const GhostButtonLink = styled.a`
+  width: 80%;
+  max-width: 80%;
   border: 2px solid #0091c9;
   border-radius: 15px;
   background-color: rgba(196, 196, 196, 0);
   color: #0091c9;
   text-transform: uppercase;
+  text-decoration: none;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.05rem;
-  padding: 1.6rem 2.4rem;
+  padding: 2.4rem 2.4rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
   text-align: center;
   transition: all ease 0.5s;
-
-  &:first-child {
-    margin-right: 2.4rem;
-  }
-
-  &:last-child {
-    margin-left: 2.4rem;
-  }
 
   &:hover {
     border: 2px solid #0091c9;
@@ -162,6 +201,6 @@ const GhostButton = styled.button`
   }
 
   @media only screen and (max-width: 1000px) {
-    width: 100%;
+    max-width: 60%;
   }
 `;

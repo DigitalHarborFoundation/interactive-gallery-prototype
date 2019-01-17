@@ -42,6 +42,9 @@ class App extends Component {
 
           <CTAContainer>
             <ProjectTitle>Interactive Project Gallery</ProjectTitle>
+            <ProjectSubTitle>
+              Click on a course to load projects
+            </ProjectSubTitle>
             <ButtonContainer>
               <GhostButton
                 onClick={this.selectCourse.bind(this, "VectorFab")}
@@ -135,7 +138,7 @@ const Masthead = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 40vh;
   min-width: 100vw;
   width: 100%;
   height: 100%;
@@ -150,7 +153,8 @@ const CTAContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 16vh;
+  /* margin-top: 16vh; */
+  margin-top: 5vh;
 
   @media only screen and (max-width: 1000px) {
     text-align: center;
@@ -161,15 +165,25 @@ const ProjectTitle = styled.h2`
   font-size: 4rem;
   font-weight: normal;
   color: #fafafa;
-  margin-bottom: 10vh;
+  /* margin-bottom: 10vh; */
+  margin-bottom: 5vh;
 
+  @media only screen and (max-width: 1000px) {
+  }
+`;
+
+const ProjectSubTitle = styled.h3`
+  font-size: 3rem;
+  font-weight: normal;
+  margin-bottom: 5vh;
+  color: #fafafa;
   @media only screen and (max-width: 1000px) {
   }
 `;
 
 const ButtonContainer = styled.div`
   display: flex;
-  margin-bottom: 2rem;
+  margin-bottom: 7rem;
   flex-direction: row;
   justify-items: center;
   align-items: center;

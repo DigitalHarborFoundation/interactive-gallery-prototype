@@ -11,6 +11,9 @@ class ProjectCardGrid extends Component {
   render() {
     return (
       <ContentWrapper>
+        <NowBrowsingHeader>
+          Now Browsing: {this.props.selectedCourse}
+        </NowBrowsingHeader>
         <Spring
           native
           config={{ tension: 280, friction: 60 }}
@@ -71,6 +74,11 @@ export default ProjectCardGrid;
 const ContentWrapper = styled.div`
   width: 80%;
   margin: 10vh auto;
+`;
+
+const NowBrowsingHeader = styled.h2`
+  font-size: 4rem;
+  margin-bottom: 5vh;
 `;
 
 const MainGrid = styled.div`
