@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Icon from "./Icon";
 
 const Footer = () => (
   <FooterWrapper>
@@ -12,6 +13,7 @@ const Footer = () => (
         >
           © 2019 Digital Harbor Foundation. All rights reserved
         </FooterLink>
+        <Icon color="#E96544" type="facebook" />
       </FooterLinkContainer>
     </FooterTagline>
   </FooterWrapper>

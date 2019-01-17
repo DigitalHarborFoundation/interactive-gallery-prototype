@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Transition, config } from "react-spring";
-import Footer from "./components/Footer";
+import Footer from "./components/FooterDHF";
 import ProjectCardGrid from "./components/ProjectCardGrid";
 import ProjectModal from "./components/ProjectModal";
 import Toggle from "./components/Toggle";
