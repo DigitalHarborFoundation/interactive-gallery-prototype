@@ -1,60 +1,41 @@
 import React from "react";
 import styled from "styled-components";
-import Icon from "./Icon";
+import SocialLinks from "./SocialLinks";
+import ContactUs from "./ContactUs";
 
-const Footer = () => (
+const FooterDHF = () => (
   <FooterWrapper>
-    <FooterTagline>
-      <FooterLinkContainer>
-        <FooterLink
-          href="https://digitalharbor.org"
-          target="_blank"
-          rel="nofollow"
-        >
-          © 2019 Digital Harbor Foundation. All rights reserved
-        </FooterLink>
-      </FooterLinkContainer>
-      <a 
-      href="https://www.facebook.com/DigitalHarbor"
-      target="_blank"
-      rel="nofollow"
-      ><Icon color="#E96544" type="facebook" /></a>
-
-      <a 
-      href="https://twitter.com/DHFBaltimore"
-      target="_blank"
-      rel="nofollow"
-      ><Icon color="#E96544" type="twitter" /></a>
-      <a 
-      href="https://www.youtube.com/user/DHFBaltimore"
-      target="_blank"
-      rel="nofollow"
-      ><Icon color="#E96544" type="youtube" /></a>
-      <a 
-      href="https://www.flickr.com/photos/digitalharbor/"
-      target="_blank"
-      rel="nofollow"
-      ><Icon color="#E96544" type="flickr" /></a>
-      <a 
-      href="https://www.instagram.com/dhfbaltimore/"
-      target="_blank"
-      rel="nofollow"
-      ><Icon color="#E96544" type="instagram" /></a>
-    </FooterTagline>
+    <FooterContentWrapper>
+      <ContactUs />
+      <SocialLinks />
+    </FooterContentWrapper>
   </FooterWrapper>
 );
 
-export default Footer;
+export default FooterDHF;
 
 const FooterWrapper = styled.div`
   display: flex;
-  flex-shrink: 0;
-
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  padding: 3rem 0;
+  margin: 0 auto;
   background: rgba(45, 42, 42, 0.8);
   width: 100%;
+`;
+
+const FooterContentWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid #fafafafa;
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 const FooterLink = styled.a`

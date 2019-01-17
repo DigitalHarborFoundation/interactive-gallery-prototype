@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Transition, config } from "react-spring";
-import Footer from "./components/FooterDHF";
+import FooterDHF from "./components/FooterDHF";
+import Footer from "./components/Footer";
 import ProjectCardGrid from "./components/ProjectCardGrid";
 import ProjectModal from "./components/ProjectModal";
 import Toggle from "./components/Toggle";
@@ -83,6 +84,7 @@ class App extends Component {
             />
           )}
         </Transition>
+        <FooterDHF />
         <Footer />
       </AppWrapper>
     );
