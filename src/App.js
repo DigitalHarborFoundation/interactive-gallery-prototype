@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Transition, config } from "react-spring";
+import { Spring, Transition, config } from "react-spring";
 import FooterDHF from "./components/FooterDHF";
 import Footer from "./components/Footer";
 import ProjectCardGrid from "./components/ProjectCardGrid";
 import ProjectModal from "./components/ProjectModal";
 import Toggle from "./components/Toggle";
+import MemberCourses from "./components/MemberCourses";
 import { entries } from "./data";
 import heroImg from "./hero-img.jpg";
 
@@ -13,7 +14,8 @@ class App extends Component {
   state = {
     entries: [],
     selectedCourse: "",
-    hovering: false
+    hovering: false,
+    initialLoad: true
   };
 
   mouseOver = () => this.setState({ hovering: true });
@@ -24,6 +26,7 @@ class App extends Component {
       entry => entry.enrolledCourse.toLowerCase() === courseName.toLowerCase()
     );
     this.setState({
+      initialLoad: false,
       selectedCourse: `${courseName.toLowerCase()}`,
       entries: filteredEntries
     });
@@ -69,7 +72,14 @@ class App extends Component {
             </React.Fragment>
           )}
         </Toggle>
-
+        <Spring
+          config={{ tension: 150, friction: 20, delay: 750 }}
+          from={{ opacity: 0 }}
+          to={{ opacity: 1 }}
+          reset={this.state.initialLoad}
+        >
+          {props => this.state.initialLoad && <MemberCourses />}
+        </Spring>
         <Transition
           native
           items={this.state.entry}
