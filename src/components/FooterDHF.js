@@ -13,8 +13,12 @@ const Footer = () => (
         >
           © 2019 Digital Harbor Foundation. All rights reserved
         </FooterLink>
-        <Icon color="#E96544" type="facebook" />
       </FooterLinkContainer>
+      <Icon color="#E96544" type="facebook" />
+      <Icon color="#E96544" type="twitter" />
+      <Icon color="#E96544" type="youtube" />
+      <Icon color="#E96544" type="flickr" />
+      <Icon color="#E96544" type="instagram" />
     </FooterTagline>
   </FooterWrapper>
 );
