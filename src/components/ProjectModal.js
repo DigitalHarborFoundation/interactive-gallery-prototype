@@ -84,7 +84,8 @@ class ProjectModal extends Component {
                   style={{
                     opacity: styles.bgOpacity.interpolate(
                       bgOpacity => bgOpacity
-                    )
+                    ),
+                    delay: 600
                   }}
                   onClick={toggle}
                 />
