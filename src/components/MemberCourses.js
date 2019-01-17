@@ -10,7 +10,10 @@ const MemberCourses = () => (
     <MainGrid>
       <CardWrapper>
         <ProjectImageContainer>
-          <ProjectImage src={csCoreImg} />
+          <ProjectImage
+            src={csCoreImg}
+            alt="Youth engaged on project with an instructor"
+          />
         </ProjectImageContainer>
         <CourseTitle>CS Core</CourseTitle>
         <CourseDescription>
@@ -38,7 +41,10 @@ const MemberCourses = () => (
       </CardWrapper>
       <CardWrapper>
         <ProjectImageContainer>
-          <ProjectImage src={fabCoreImg} />
+          <ProjectImage
+            src={fabCoreImg}
+            alt="Youth sitting at a table, focused and working on a project "
+          />
         </ProjectImageContainer>
         <CourseTitle>Fab Core</CourseTitle>
         <CourseDescription>
