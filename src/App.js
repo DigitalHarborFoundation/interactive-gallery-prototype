@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Spring, Transition, config } from "react-spring";
+import ReactGA from "react-ga";
 import FooterDHF from "./components/FooterDHF";
 import Footer from "./components/Footer";
 import ProjectCardGrid from "./components/ProjectCardGrid";
@@ -9,6 +10,9 @@ import Toggle from "./components/Toggle";
 import MemberCourses from "./components/MemberCourses";
 import { entries } from "./data";
 import heroImg from "./hero-img.jpg";
+
+ReactGA.initialize("UA-41426299-11");
+ReactGA.pageview("/");
 
 class App extends Component {
   state = {
