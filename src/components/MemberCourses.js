@@ -89,7 +89,7 @@ const MemberCourses = () => (
           <strong>This course is ONLY open to High School aged Members.</strong>
         </CourseDescription>
         <GhostButtonLink
-          href="https://www.digitalharbor.org/event/cs-core-mondays-wednesdays-members/"
+          href="https://www.digitalharbor.org/event/independent-study-day-high-school-members/"
           target="_blank"
           rel="noopener"
         >
