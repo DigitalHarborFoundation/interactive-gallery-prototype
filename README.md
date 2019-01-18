@@ -8,6 +8,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Styled Components
 - React Spring
 
+## Cloning the Project
+
+If you want/need to build this locally, follow these steps:
+
+1. Clone or download the repo
+2. cd to the folder and do **yarn install**
+3. to start the local development server, run **yarn start**
+4. to create a production build, run **yarn build**
+
+The development environment uses the latest alpha version of React, but the production deploy uses the latest stable version.
+
+The app hasn't been ejected from create-react-app, so the bundling and codesplitting is all handled by the default Webpack config.
+
 ## TODO:
 
 - Smooth animation when closing modal
