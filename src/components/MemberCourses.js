@@ -12,7 +12,7 @@ const MemberCourses = () => (
         <ProjectImageContainer>
           <ProjectImage
             src={csCoreImg}
-            alt="Youth engaged on project with an instructor"
+            alt="Two youth engaged on project with an instructor sitting next to them"
           />
         </ProjectImageContainer>
         <CourseTitle>CS Core</CourseTitle>
@@ -43,7 +43,7 @@ const MemberCourses = () => (
         <ProjectImageContainer>
           <ProjectImage
             src={fabCoreImg}
-            alt="Youth sitting at a table, focused and working on a project "
+            alt="Two youth engaged on project with an instructor sitting next to them"
           />
         </ProjectImageContainer>
         <CourseTitle>Fab Core</CourseTitle>
@@ -71,7 +71,10 @@ const MemberCourses = () => (
       </CardWrapper>
       <CardWrapper>
         <ProjectImageContainer>
-          <ProjectImage src={indStudyImg} />
+          <ProjectImage
+            src={indStudyImg}
+            alt="Two youth engaged on project with an instructor sitting next to them"
+          />
         </ProjectImageContainer>
         <CourseTitle>Independent Study</CourseTitle>
         <CourseDescription>
