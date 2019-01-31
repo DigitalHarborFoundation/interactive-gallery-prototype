@@ -6,17 +6,24 @@ const SocialLinks = () => (
   <LinkContainer>
     <a
       href="https://www.facebook.com/DigitalHarbor"
+      aria-label="Find Digital Harbor Foundation on Facebook"
       target="_blank"
       rel="nofollow"
     >
       <Icon color="#E96544" type="facebook" />
     </a>
 
-    <a href="https://twitter.com/DHFBaltimore" target="_blank" rel="nofollow">
+    <a
+      href="https://twitter.com/DHFBaltimore"
+      aria-label="Find Digital Harbor Foundation on Twitter"
+      target="_blank"
+      rel="nofollow"
+    >
       <Icon color="#E96544" type="twitter" />
     </a>
     <a
       href="https://www.youtube.com/user/DHFBaltimore"
+      aria-label="Find Digital Harbor Foundation on YouTube"
       target="_blank"
       rel="nofollow"
     >
@@ -24,6 +31,7 @@ const SocialLinks = () => (
     </a>
     <a
       href="https://www.flickr.com/photos/digitalharbor/"
+      aria-label="Find Digital Harbor Foundation on Flickr"
       target="_blank"
       rel="nofollow"
     >
@@ -31,6 +39,7 @@ const SocialLinks = () => (
     </a>
     <a
       href="https://www.instagram.com/dhfbaltimore/"
+      aria-label="Find Digital Harbor Foundation on Instagram"
       target="_blank"
       rel="nofollow"
     >
