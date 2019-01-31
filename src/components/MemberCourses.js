@@ -177,10 +177,10 @@ const CourseDescription = styled.p`
 const GhostButtonLink = styled.a`
   width: 80%;
   max-width: 80%;
-  border: 2px solid #0091c9;
+  border: 2px solid #002432;
   border-radius: 15px;
   background-color: rgba(196, 196, 196, 0);
-  color: #0091c9;
+  color: #002432;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 2rem;
@@ -195,8 +195,8 @@ const GhostButtonLink = styled.a`
   transition: all ease 0.5s;
 
   &:hover {
-    border: 2px solid #0091c9;
-    color: #0091c9;
+    border: 2px solid #002432;
+    color: #002432;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
