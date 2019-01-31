@@ -8,7 +8,7 @@ const SocialLinks = () => (
       href="https://www.facebook.com/DigitalHarbor"
       aria-label="Find Digital Harbor Foundation on Facebook"
       target="_blank"
-      rel="nofollow"
+      rel="nofollow noopener"
     >
       <Icon color="#E96544" type="facebook" />
     </a>
@@ -17,7 +17,7 @@ const SocialLinks = () => (
       href="https://twitter.com/DHFBaltimore"
       aria-label="Find Digital Harbor Foundation on Twitter"
       target="_blank"
-      rel="nofollow"
+      rel="nofollow noopener"
     >
       <Icon color="#E96544" type="twitter" />
     </a>
@@ -25,7 +25,7 @@ const SocialLinks = () => (
       href="https://www.youtube.com/user/DHFBaltimore"
       aria-label="Find Digital Harbor Foundation on YouTube"
       target="_blank"
-      rel="nofollow"
+      rel="nofollow noopener"
     >
       <Icon color="#E96544" type="youtube" />
     </a>
@@ -33,7 +33,7 @@ const SocialLinks = () => (
       href="https://www.flickr.com/photos/digitalharbor/"
       aria-label="Find Digital Harbor Foundation on Flickr"
       target="_blank"
-      rel="nofollow"
+      rel="nofollow noopener"
     >
       <Icon color="#E96544" type="flickr" />
     </a>
@@ -41,7 +41,7 @@ const SocialLinks = () => (
       href="https://www.instagram.com/dhfbaltimore/"
       aria-label="Find Digital Harbor Foundation on Instagram"
       target="_blank"
-      rel="nofollow"
+      rel="nofollow noopener"
     >
       <Icon color="#E96544" type="instagram" />
     </a>
