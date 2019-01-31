@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import csCoreImg from "./mb-cscore-img.jpg";
-import fabCoreImg from "./mb-fabcore-img.jpg";
-import indStudyImg from "./mb-indstudy-img.jpg";
+import csCoreImg from "./mb-cs-core-new.jpg";
+import fabCoreImg from "./mb-fab-core-new.jpg";
+import indStudyImg from "./mb-ind-study-new.jpg";
 
 const MemberCourses = () => (
   <ContentWrapper>
@@ -121,6 +121,7 @@ const SectionTitle = styled.h2`
 const MainGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr min-content;
   grid-column-gap: 4vw;
   grid-row-gap: 4vh;
   margin-top: 5rem;
@@ -148,21 +149,12 @@ const CardWrapper = styled.div`
 
 const ProjectImageContainer = styled.div`
   width: 100%;
-  margin: auto;
 `;
 
 const ProjectImage = styled.img`
   width: 100%;
   height: auto;
   border-radius: 10px;
-`;
-
-const ProjectInfoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 4rem 0;
 `;
 
 const CourseTitle = styled.h3`
@@ -175,7 +167,7 @@ const CourseTitle = styled.h3`
 const CourseDescription = styled.p`
   color: #000;
   font-size: 2.4rem;
-  margin: 0 auto;
+  margin-bottom: auto;
   padding: 2rem;
 `;
 
