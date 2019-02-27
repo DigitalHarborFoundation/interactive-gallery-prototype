@@ -28,3 +28,9 @@ const DHFTitle = styled.h1`
     padding: 0 1rem;
   }
 `;
+
+const Header = props => (
+  <div className="header-wrapper">
+    <h1 className="header-title">Digital Harbor Foundation</h1>
+  </div>
+);

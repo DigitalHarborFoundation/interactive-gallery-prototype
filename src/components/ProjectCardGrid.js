@@ -5,9 +5,6 @@ import PropTypes from "prop-types";
 import ProjectCard from "./ProjectCard";
 
 class ProjectCardGrid extends Component {
-  componentDidUpdate() {
-    console.log("I updated!");
-  }
   render() {
     return (
       <ContentWrapper>
